@@ -10,6 +10,12 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  /* Brand palette */
+  --color-brand-sand: #ffd5ac;
+  --color-brand-sky: #70c7d9;
+  --color-brand-ink: #09070d;
+  --color-brand-violet: #9174ea;
+  --color-brand-pink: #efb2d9;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,4 +33,15 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Partner marquee animation used in Sections */
+.marquee {
+  width: max-content;
+  animation: marquee 20s linear infinite;
+  padding-left: 100%;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }

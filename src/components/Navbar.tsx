@@ -20,18 +20,26 @@ export default function Navbar() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-black/10 dark:border-white/10 backdrop-blur bg-white/70 dark:bg-black/40">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-black/10 dark:border-white/10 backdrop-blur bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link href="#home" className="font-semibold tracking-tight text-lg">
           FEEL
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className="text-sm text-black/80 dark:text-white/80 hover:text-black dark:hover:text-white transition-colors">
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-sm text-black/80 dark:text-white/80 px-1.5 py-1 border-b-2 border-transparent hover:text-[var(--color-brand-violet)] hover:border-[var(--color-brand-violet)] transition-colors"
+            >
               {item.label}
             </Link>
           ))}
-          <Link href="https://pages.razorpay.com/pl_QsPAqay3600bdQ/view" target="_blank" className="inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-500">
+          <Link
+            href="https://pages.razorpay.com/pl_QsPAqay3600bdQ/view"
+            target="_blank"
+            className="inline-flex items-center gap-1 text-sm rounded-md px-2 py-1 text-[var(--color-brand-sky)] hover:text-[var(--color-brand-violet)] transition-colors"
+          >
             Register <ExternalLink className="h-3.5 w-3.5" />
           </Link>
           <button
@@ -61,11 +69,21 @@ export default function Navbar() {
         <div className="md:hidden border-t border-black/10 dark:border-white/10 bg-white/80 dark:bg-black/60 backdrop-blur">
           <div className="px-4 py-3 flex flex-col gap-3">
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href} onClick={() => setOpen(false)} className="text-sm">
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className="text-sm border-b border-transparent pb-1 hover:text-[var(--color-brand-violet)] hover:border-[var(--color-brand-violet)] transition-colors"
+              >
                 {item.label}
               </Link>
             ))}
-            <Link href="https://pages.razorpay.com/pl_QsPAqay3600bdQ/view" target="_blank" onClick={() => setOpen(false)} className="text-sm text-blue-600">
+            <Link
+              href="https://pages.razorpay.com/pl_QsPAqay3600bdQ/view"
+              target="_blank"
+              onClick={() => setOpen(false)}
+              className="text-sm rounded px-2 py-1 text-[var(--color-brand-sky)] hover:text-[var(--color-brand-violet)] transition-colors"
+            >
               Register
             </Link>
           </div>

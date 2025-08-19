@@ -18,6 +18,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "FEEL — Festival of Experiential Events & Learning",
   description: "A modern event experience with speakers, stalls, partners, and more.",
+  icons: {
+    icon: "public/goodmind.png",
+  },
 };
 
 export default function RootLayout({
