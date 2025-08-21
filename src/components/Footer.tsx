@@ -3,7 +3,9 @@ import { Facebook, Instagram, Mail, Phone, Youtube } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-black/10 dark:border-white/10 py-10 mt-16">
+    <footer className="border-t border-black/10 dark:border-white/10 py-10 mt-16 relative overflow-hidden">
+      {/* Subtle gradient background */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#ffd5ac]/15 via-[#70c7d9]/15 to-[#9174ea]/15" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid gap-8 md:grid-cols-3">
         <div>
           <div className="text-lg font-semibold">FEEL</div>

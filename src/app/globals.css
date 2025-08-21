@@ -45,3 +45,42 @@ html {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
+@keyframes border-rotate {
+  0% {
+    background: conic-gradient(
+      from 0deg,
+      #ffd5ac,
+      white,
+      #70c7d9,
+      white,
+      #09070d,
+      white,
+      #9174ea,
+      white,
+      #efb2d9,
+      white
+    );
+  }
+  100% {
+    background: conic-gradient(
+      from 360deg,
+      #ffd5ac,
+      white,
+      #70c7d9,
+      white,
+      #09070d,
+      white,
+      #9174ea,
+      white,
+      #efb2d9,
+      white
+    );
+  }
+}
+
+.animate-border {
+  animation: border-rotate 6s linear infinite;
+  background-size: 200% 200%;
+  border-radius: 0.75rem; /* same as rounded-xl */
+}

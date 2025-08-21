@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Hero from "./Hero";
 import { agenda, stalls, partners, throwbackGallery } from "@/data";
+import { Users, Mic, Store, Eye } from "lucide-react"; // ✅ Replace emojis with icons
 
 export default function Sections() {
   return (
@@ -10,19 +11,23 @@ export default function Sections() {
       <section className="py-16" aria-labelledby="home-about">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
+          <div className="relative p-[4px] rounded-xl animate-border">
+            <div className="bg-white rounded-xl p-[6px]">
               <img
-                src="/feel-about.jpg"
+                src="/about-feel.svg"
                 alt="About FEEL"
-                className="w-full h-auto rounded-xl border border-black/10 dark:border-white/10"
+                className="w-full h-auto rounded-xl"
               />
             </div>
+          </div>
             <div>
               <h2 id="home-about" className="text-2xl font-semibold tracking-tight inline-block border-b-2 border-[var(--color-brand-sand)]">About</h2>
               <p className="mt-4 text-black/70 dark:text-white/70 leading-relaxed">
-                Goodminds is a mental wellness app helping individuals build healthy habits and access supportive resources.
-                FEEL brings that mission to life as Telangana&apos;s largest experiential festival for learning and well-being.
+              FEEL is the flagship annual event by GoodMind Care Foundation and Telangana’s largest mental health awareness initiative. Since its inception in 2021, FEEL has reached 10M+ people online, welcomed over 7,000 attendees, and provided direct support to 15,000+ individuals through assessments and counselling.
+
+Now entering its 5th edition, FEEL has evolved into a movement that creates safe and creative spaces for dialogue on mental health. From art therapy sessions and anonymous counselling to expert panels, open mics, and wellness workshops, the festival champions both expression and healing.
+
+By normalizing conversations on mental health and encouraging early help-seeking behavior, FEEL continues to drive meaningful change among students, professionals, and community leaders, making mental well-being a shared priority for all.
               </p>
               <p className="mt-3 text-black/70 dark:text-white/70 leading-relaxed">
                 Join us to explore inspiring talks, interactive stalls, and community-driven experiences that prioritize mental health.
@@ -32,43 +37,74 @@ export default function Sections() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-10" aria-labelledby="home-stats">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 id="home-stats" className="sr-only">Stats</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[{ n: "10000+", l: "Previous Participants" }, { n: "30+", l: "Speakers" }, { n: "100+", l: "Stalls" }, { n: "1M+", l: "Impressions" }].
-              map((s, i) => (
-                <div
-                  key={i}
-                  className="rounded-xl p-6 border border-black/10 dark:border-white/10 bg-white/60 dark:bg-black/30 text-center hover:-translate-y-0.5 hover:shadow transition ring-1 ring-transparent hover:ring-[var(--color-brand-sky)]"
-                >
-                  <div className="text-3xl font-bold tracking-tight">{s.n}</div>
-                  <div className="text-sm mt-1 text-black/70 dark:text-white/70">{s.l}</div>
-                </div>
-              ))}
-          </div>
-        </div>
-      </section>
+      
+      
 
-      {/* Partner Marquee Section */}
-      <section className="py-8" aria-labelledby="home-partner-marquee">
-        <div className="mx-auto max-w-7xl px-0">
-          <h2 id="home-partner-marquee" className="sr-only">Partner Marquee</h2>
-          <div className="relative overflow-hidden">
-            <div className="rotate-2 origin-center">
-              <div className="h-[10vh] bg-white/70 dark:bg-black/40 border-y border-black/10 dark:border-white/10 backdrop-blur overflow-hidden">
-                <div className="marquee flex items-center gap-10 h-full">
-                  {["/partners/p1.svg","/partners/p2.svg","/partners/p3.svg","/partners/p4.svg","/partners/p5.svg"].concat(["/partners/p1.svg","/partners/p2.svg","/partners/p3.svg","/partners/p4.svg","/partners/p5.svg"]).map((src, idx) => (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img key={idx} src={src} alt="Partner" className="h-10 md:h-12 w-auto opacity-80 hover:opacity-100 transition-opacity" />
-                  ))}
-                </div>
-              </div>
-            </div>
+      {/* Wrapper with gradient background for both sections */}
+<div className="relative">
+  {/* Light gradient background */}
+  <div className="absolute inset-0 -z-10 bg-[linear-gradient(135deg,#ffd5ac,#70c7d9,#9174ea,#efb2d9)] opacity-20" />
+
+  {/* Stats Section */}
+  <section 
+    className="py-16 pb-0 relative" 
+    aria-labelledby="home-stats"
+  >
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
+      <h2 id="home-stats" className="sr-only">Stats</h2>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {[
+          { n: "10000+", l: "Previous Participants", i: <Users className="w-7 h-7 text-[#70c7d9]" /> },
+          { n: "30+", l: "Speakers", i: <Mic className="w-7 h-7 text-[#9174ea]" /> },
+          { n: "100+", l: "Stalls", i: <Store className="w-7 h-7 text-[#ffd5ac]" /> },
+          { n: "3M+", l: "Impressions", i: <Eye className="w-7 h-7 text-[#efb2d9]" /> },
+        ].map((s, i) => (
+          <div
+            key={i}
+            className="rounded-xl p-6 border border-black/10 dark:border-white/10 
+                      bg-white/60 dark:bg-black/30 
+                      text-center hover:-translate-y-1 hover:shadow-xl transition 
+                      ring-1 ring-transparent hover:ring-[#70c7d9]/40"
+          >
+            <div className="flex justify-center mb-2">{s.i}</div>
+            <div className="text-3xl font-bold tracking-tight">{s.n}</div>
+            <div className="text-base mt-1 text-black/70 dark:text-white/70">{s.l}</div>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Partner Marquee Section - seamless connection to Stats */}
+  <div className="relative">
+  <div className="h-[10vh] mt-10 bg-white overflow-hidden -rotate-2 origin-center relative z-10 
+                  border-t-1 border-b-1 border-[#70c7d9] shadow-md">
+    <div className="marquee flex items-center gap-8 h-full px-4">
+      {[
+        "Hyderabad, India",
+        "⭐",
+        "India's Biggest Startup Festival",
+        "⭐",
+        "The August Fest",
+        "⭐",
+        "Hyderabad, India",
+        "⭐",
+        "India's Biggest Startup Festival",
+        "⭐",
+        "The August Fest"
+      ].map((text, idx) => (
+        <span
+          key={idx}
+          className="text-black/70 dark:text-white/70 font-semibold text-lg whitespace-nowrap"
+        >
+          {text}
+        </span>
+      ))}
+    </div>
+  </div>
+</div>
+</div>
+
 
       <section className="py-16" aria-labelledby="home-agenda">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -94,33 +130,53 @@ export default function Sections() {
             <h2 id="home-stalls" className="text-2xl font-semibold tracking-tight inline-block border-b-2 border-[var(--color-brand-sand)]">Stalls</h2>
             <Link href="/stalls" className="text-sm text-blue-600 hover:text-blue-500">View All</Link>
           </div>
-          <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mt-6">
-            {stalls.slice(0, 4).map((stall) => (
-              <div key={stall.id} className="rounded-xl p-4 border border-black/10 dark:border-white/10 bg-white/50 dark:bg-black/30 hover:shadow transition-shadow">
-                <div className="font-medium">{stall.name}</div>
-                <p className="text-sm text-black/70 dark:text-white/70 mt-1">{stall.description}</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+            {stalls.slice(0, 4).map((stall) => {
+              const logo = `/stalls/${stall.id}.png`;
+              return (
+                <div key={stall.id} className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-4">
+                  <div className="flex items-start gap-4">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={logo} alt={stall.name} className="w-14 h-14 rounded-md object-cover border border-black/10 dark:border-white/10" />
+                    <div className="flex-1">
+                      <div className="font-medium">{stall.name}</div>
+                      <p className="text-sm text-black/70 dark:text-white/70 mt-1">{stall.description}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      <section className="py-16" aria-labelledby="home-partners">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex items-end justify-between">
-            <h2 id="home-partners" className="text-2xl font-semibold tracking-tight inline-block border-b-2 border-[var(--color-brand-sand)]">Partners</h2>
-            <Link href="/partners" className="text-sm text-blue-600 hover:text-blue-500">See All Partners</Link>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-6 items-center">
-            {partners.slice(0, 4).map((p) => (
-              <div key={p.id} className="relative h-16 grayscale opacity-80 hover:opacity-100 transition-opacity">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.logo} alt={p.name} className="w-full h-full object-contain" />
+                           <section className="py-16" aria-labelledby="home-partners">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h2 id="home-partners" className="text-2xl font-semibold tracking-tight inline-block border-b-2 border-[var(--color-brand-sand)] mb-8">Partners</h2>
+              
+              {/* Single image with all partner logos */}
+              <div className="max-w-4xl mx-auto mb-8">
+                <img 
+                  src="/partners/all-partners.svg" 
+                  alt="All Partners" 
+                  className="w-full h-auto  opacity-80 hover:opacity-100 transition-opacity" 
+                />
               </div>
-            ))}
+              
+              {/* Know More button */}
+              <Link 
+                href="/partners" 
+                className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-500 font-medium transition-colors"
+              >
+                Know More
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Highlights Grid */}
       <section className="py-16" aria-labelledby="home-highlights">
@@ -161,46 +217,23 @@ export default function Sections() {
         </div>
       </section>
 
-      <section className="py-16" aria-labelledby="home-collaborate">
+            <section className="py-16" aria-labelledby="home-collaborate">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex items-end justify-between">
-            <h2 id="home-collaborate" className="text-2xl font-semibold tracking-tight inline-block border-b-2 border-[var(--color-brand-sand)]">Collaborate</h2>
-            <div className="flex flex-wrap items-center gap-2">
-              <Link
-                href="https://pages.razorpay.com/pl_QsPAqay3600bdQ/view"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-4 py-2 rounded-md text-white text-sm font-medium bg-blue-600 hover:bg-blue-500 transition-colors"
-              >
-                Register
-              </Link>
-              <Link
-                href="http://bit.ly/4kPKaEJ"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-4 py-2 rounded-md text-white text-sm font-medium bg-green-600 hover:bg-green-500 transition-colors"
-              >
-                Volunteer
-              </Link>
-              <Link
-                href="https://docs.google.com/forms/d/e/1FAIpQLSegcmy5lpwL6Irg0hQnbPSV1bn9z3KnvEcIcnjWgBt3uVbAGA/viewform"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-4 py-2 rounded-md text-white text-sm font-medium bg-purple-600 hover:bg-purple-500 transition-colors"
-              >
-                Partner
-              </Link>
-              <Link
-                href="https://forms.gle/your-sponsor-form"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-4 py-2 rounded-md text-white text-sm font-medium bg-yellow-600 hover:bg-yellow-500 transition-colors"
-              >
-                Sponsor
-              </Link>
-            </div>
+          <h2 id="home-collaborate" className="text-2xl font-semibold tracking-tight inline-block border-b-2 border-[var(--color-brand-sand)]">Collaborate</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+            {[
+              { h: "Register", d: "Register and join the movement.", href: "https://pages.razorpay.com/pl_QsPAqay3600bdQ/view" },
+              { h: "Volunteer", d: "Volunteer and gain experience, click below to apply.", href: "http://bit.ly/4kPKaEJ" },
+              { h: "Partner", d: "Partner with us to create impact.", href: "https://docs.google.com/forms/d/e/1FAIpQLSegcmy5lpwL6Irg0hQnbPSV1bn9z3KnvEcIcnjWgBt3uVbAGA/viewform" },
+              { h: "Sponsor", d: "Support FEEL as a sponsor.", href: "https://forms.gle/your-sponsor-form" },
+            ].map((b, i) => (
+              <div key={i} className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-4 border border-black/10 dark:border-white/10">
+                <div className="font-semibold">{b.h}</div>
+                <p className="text-sm text-black/70 dark:text-white/70 mt-1">{b.d}</p>
+                <a href={b.href} target="_blank" rel="noopener noreferrer" className="inline-block mt-3 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-500 text-sm font-medium">{b.h}</a>
+              </div>
+            ))}
           </div>
-          <p className="text-black/70 dark:text-white/70 mt-3 max-w-3xl">Partner with FEEL, volunteer, or collaborate on initiatives. We welcome organizations and individuals passionate about mental wellness.</p>
         </div>
       </section>
 

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X, Moon, Sun, ExternalLink } from "lucide-react";
 import { useTheme } from "next-themes";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -18,6 +19,7 @@ const navItems = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { theme, setTheme } = useTheme();
+  const pathname = usePathname();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-black/10 dark:border-white/10 backdrop-blur bg-white">
@@ -26,15 +28,22 @@ export default function Navbar() {
           FEEL
         </Link>
         <nav className="hidden md:flex items-center gap-6">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-sm text-black/80 dark:text-white/80 px-1.5 py-1 border-b-2 border-transparent hover:text-[var(--color-brand-violet)] hover:border-[var(--color-brand-violet)] transition-colors"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`text-sm px-1.5 py-1 border-b-2 transition-colors ${
+                  isActive
+                    ? "text-blue-600 font-semibold border-blue-600"
+                    : "text-black/80 dark:text-white/80 border-transparent hover:text-[var(--color-brand-violet)] hover:border-[var(--color-brand-violet)]"
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
           <Link
             href="https://pages.razorpay.com/pl_QsPAqay3600bdQ/view"
             target="_blank"
@@ -68,16 +77,23 @@ export default function Navbar() {
       {open && (
         <div className="md:hidden border-t border-black/10 dark:border-white/10 bg-white/80 dark:bg-black/60 backdrop-blur">
           <div className="px-4 py-3 flex flex-col gap-3">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                className="text-sm border-b border-transparent pb-1 hover:text-[var(--color-brand-violet)] hover:border-[var(--color-brand-violet)] transition-colors"
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const isActive = pathname === item.href;
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className={`text-sm pb-1 border-b transition-colors ${
+                    isActive
+                      ? "text-blue-600 font-semibold border-blue-600"
+                      : "border-transparent hover:text-[var(--color-brand-violet)] hover:border-[var(--color-brand-violet)]"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
             <Link
               href="https://pages.razorpay.com/pl_QsPAqay3600bdQ/view"
               target="_blank"

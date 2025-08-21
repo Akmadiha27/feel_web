@@ -1,139 +1,85 @@
+"use client";
+
 import Image from "next/image";
+import useEmblaCarousel from "embla-carousel-react";
 
-const stallsPhotos = [
-  { src: "/throwback/t1.svg", alt: "Stall photo 1" },
-  { src: "/throwback/t2.svg", alt: "Stall photo 2" },
-  { src: "/throwback/t3.svg", alt: "Stall photo 3" },
-];
+function Carousel({ items }: { items: { src: string; alt: string; type?: "image" | "video" }[] }) {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
+  
+  const scrollPrev = () => emblaApi && emblaApi.scrollPrev();
+  const scrollNext = () => emblaApi && emblaApi.scrollNext();
 
-const groupPhotos = [
-  { src: "/speakers/s1.svg", alt: "Group photo 1" },
-  { src: "/speakers/s2.svg", alt: "Group photo 2" },
-  { src: "/speakers/s3.svg", alt: "Group photo 3" },
-];
-
-const speakersPhotos = [
-  { src: "/speakers/s1.svg", alt: "Speaker session 1" },
-  { src: "/speakers/s4.svg", alt: "Speaker session 2" },
-  { src: "/speakers/s2.svg", alt: "Speaker session 3" },
-];
-
-const gamesPhotos = [
-  { src: "/throwback/t2.svg", alt: "Games photo 1" },
-  { src: "/throwback/t1.svg", alt: "Games photo 2" },
-  { src: "/throwback/t3.svg", alt: "Games photo 3" },
-];
-
-const interactionsPhotos = [
-  { src: "/speakers/s3.svg", alt: "Audience engagement 1" },
-  { src: "/speakers/s2.svg", alt: "Audience engagement 2" },
-  { src: "/speakers/s1.svg", alt: "Audience engagement 3" },
-];
-
-const reviews = [
-  { quote: "An inspiring and refreshing experience!", author: "Priya K." },
-  { quote: "Well-organized and deeply impactful sessions.", author: "Arun M." },
-  { quote: "Loved the stalls and community vibe!", author: "Zara L." },
-];
+  return (
+    <div className="relative overflow-hidden" ref={emblaRef}>
+      <div className="flex">
+        {items.map((it, idx) => (
+          <div key={idx} className="min-w-0 flex-[0_0_100%] sm:flex-[0_0_100%] md:flex-[0_0_100%] p-2">
+            <div className="relative w-full aspect-video overflow-hidden rounded-lg bg-black/5 dark:bg-white/10">
+              {it.type === "video" ? (
+                <video src={it.src} className="w-full h-full object-cover" controls />
+              ) : (
+                <Image src={it.src} alt={it.alt} fill className="object-cover" />
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      {/* Navigation arrows */}
+      <button
+        onClick={scrollPrev}
+        className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 dark:bg-black/80 rounded-full flex items-center justify-center shadow-lg hover:bg-white dark:hover:bg-black transition-colors z-10"
+        aria-label="Previous slide"
+      >
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      
+      <button
+        onClick={scrollNext}
+        className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 dark:bg-black/80 rounded-full flex items-center justify-center shadow-lg hover:bg-white dark:hover:bg-black transition-colors z-10"
+        aria-label="Next slide"
+      >
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+  );
+}
 
 export default function ThrowbackPage() {
-  const navItems = [
-    { href: "#stalls", label: "Jump to Stalls" },
-    { href: "#group", label: "Jump to Group" },
-    { href: "#speakers", label: "Jump to Speakers" },
-    { href: "#games", label: "Jump to Games" },
-    { href: "#interactions", label: "Jump to Interactions" },
-    { href: "#reviews", label: "Jump to Reviews" },
+  const carousel1 = [
+    { src: "/throwback/t1.svg", alt: "Throwback 1", type: "image" },
+    { src: "/throwback/t2.svg", alt: "Throwback 2", type: "image" },
+    { src: "/throwback/t3.svg", alt: "Throwback 3", type: "image" },
+    { src: "https://www.w3schools.com/html/mov_bbb.mp4", alt: "Throwback 4", type: "video" },
+    { src: "/throwback/t1.svg", alt: "Throwback 5", type: "image" }
+  ];
+  const carousel2 = [
+    { src: "/throwback/t2.svg", alt: "Throwback 6", type: "image" },
+    { src: "https://www.w3schools.com/html/mov_bbb.mp4", alt: "Throwback 7", type: "video" },
+    { src: "/throwback/t3.svg", alt: "Throwback 8", type: "image" },
+    { src: "/throwback/t1.svg", alt: "Throwback 9", type: "image" },
+    { src: "/throwback/t2.svg", alt: "Throwback 10", type: "image" }
+  ];
+  const carousel3 = [
+    { src: "https://www.w3schools.com/html/mov_bbb.mp4", alt: "Throwback 11", type: "video" },
+    { src: "/throwback/t1.svg", alt: "Throwback 12", type: "image" },
+    { src: "/throwback/t2.svg", alt: "Throwback 13", type: "image" },
+    { src: "/throwback/t3.svg", alt: "Throwback 14", type: "image" },
+    { src: "https://www.w3schools.com/html/mov_bbb.mp4", alt: "Throwback 15", type: "video" }
   ];
 
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
-      <div className="flex flex-wrap gap-2 sm:gap-3 mb-8">
-        {navItems.map((item) => (
-          <a
-            key={item.href}
-            href={item.href}
-            className="text-xs sm:text-sm px-3 py-1.5 rounded-full border border-black/10 dark:border-white/10 hover:bg-black/[.04] dark:hover:bg-white/[.06]"
-          >
-            {item.label}
-          </a>
-        ))}
-      </div>
-
       <h1 className="text-3xl font-semibold tracking-tight">Throwback</h1>
-
-      {/* Stalls */}
-      <section id="stalls" className="mt-8">
-        <h2 className="text-2xl font-semibold tracking-tight">Stalls</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
-          {stallsPhotos.map((p, i) => (
-            <div key={i} className="relative aspect-video overflow-hidden rounded-lg border border-black/10 dark:border-white/10">
-              <Image src={p.src} alt={p.alt} fill className="object-cover" />
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Group */}
-      <section id="group" className="mt-12">
-        <h2 className="text-2xl font-semibold tracking-tight">Group</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
-          {groupPhotos.map((p, i) => (
-            <div key={i} className="relative aspect-video overflow-hidden rounded-lg border border-black/10 dark:border-white/10">
-              <Image src={p.src} alt={p.alt} fill className="object-cover" />
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Speakers */}
-      <section id="speakers" className="mt-12">
-        <h2 className="text-2xl font-semibold tracking-tight">Speakers</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
-          {speakersPhotos.map((p, i) => (
-            <div key={i} className="relative aspect-video overflow-hidden rounded-lg border border-black/10 dark:border-white/10">
-              <Image src={p.src} alt={p.alt} fill className="object-cover" />
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Games */}
-      <section id="games" className="mt-12">
-        <h2 className="text-2xl font-semibold tracking-tight">Games</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
-          {gamesPhotos.map((p, i) => (
-            <div key={i} className="relative aspect-video overflow-hidden rounded-lg border border-black/10 dark:border-white/10">
-              <Image src={p.src} alt={p.alt} fill className="object-cover" />
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Interactions */}
-      <section id="interactions" className="mt-12">
-        <h2 className="text-2xl font-semibold tracking-tight">Interactions</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
-          {interactionsPhotos.map((p, i) => (
-            <div key={i} className="relative aspect-video overflow-hidden rounded-lg border border-black/10 dark:border-white/10">
-              <Image src={p.src} alt={p.alt} fill className="object-cover" />
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Reviews */}
-      <section id="reviews" className="mt-12">
-        <h2 className="text-2xl font-semibold tracking-tight">Reviews</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
-          {reviews.map((r, i) => (
-            <div key={i} className="rounded-xl border border-black/10 dark:border-white/10 p-5 bg-white/60 dark:bg-black/30">
-              <p className="italic">“{r.quote}”</p>
-              <div className="mt-3 text-sm text-black/70 dark:text-white/70">— {r.author}</div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <div className="mt-8 space-y-10">
+        <Carousel items={carousel1} />
+        <Carousel items={carousel2} />
+        <Carousel items={carousel3} />
+      </div>
     </div>
   );
 }
