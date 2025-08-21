@@ -10,7 +10,10 @@ export async function POST(request: Request) {
 
     const supabase = getSupabaseServer();
     const { error } = await supabase.from("collaborations").insert({ name, email, message });
-    if (error) throw error;
+          if (error) {
+        console.error('Supabase error:', error);
+        throw new Error('Database operation failed');
+      }
 
     return NextResponse.json({ ok: true });
   } catch (error) {

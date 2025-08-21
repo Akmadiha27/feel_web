@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FEEL — Festival of Experiential Events & Learning",
+      title: "FEEL",
   description: "A modern event experience with speakers, stalls, partners, and more.",
   icons: {
     icon: "public/goodmind.png",
@@ -30,10 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className="h-full">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background text-foreground`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background text-foreground flex flex-col`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
-          <main>
+          <main className="flex-1">
             {children}
           </main>
           <Footer />

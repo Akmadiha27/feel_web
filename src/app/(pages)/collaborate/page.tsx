@@ -9,10 +9,10 @@ export default function CollaboratePage() {
           { h: "Partner", d: "Partner with us to create impact.", href: "https://docs.google.com/forms/d/e/1FAIpQLSegcmy5lpwL6Irg0hQnbPSV1bn9z3KnvEcIcnjWgBt3uVbAGA/viewform" },
           { h: "Sponsor", d: "Support FEEL as a sponsor.", href: "https://forms.gle/your-sponsor-form" },
         ].map((b, i) => (
-          <div key={i} className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-4 border border-black/10 dark:border-white/10">
+          <div key={i} className="relative bg-white/95 dark:bg-gray-800/95 shadow-md rounded-lg p-4 border border-black/10 dark:border-white/10 overflow-hidden hover:border-[#ffd5ac] hover:border-2 transition-all duration-300">
             <div className="font-semibold">{b.h}</div>
             <p className="text-sm text-black/70 dark:text-white/70 mt-1">{b.d}</p>
-            <a href={b.href} target="_blank" rel="noopener noreferrer" className="inline-block mt-3 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-500 text-sm font-medium">{b.h}</a>
+            <a href={b.href} target="_blank" rel="noopener noreferrer" className="inline-block mt-3 bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 text-sm font-medium transition-colors">{b.h}</a>
           </div>
         ))}
       </div>

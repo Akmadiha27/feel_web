@@ -42,8 +42,8 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-6 flex flex-col items-center"
           >
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white tracking-wide max-w-6xl mx-auto leading-relaxed">
-              Telangana's Largest Mental Wellness Event
+                          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white tracking-wide max-w-6xl mx-auto leading-relaxed">
+              Telangana&apos;s Largest Mental Wellness Event
             </h1>
             
              {/* Dynamic dotted line for tagline - matches text width */}
@@ -110,7 +110,7 @@ export default function Hero() {
             </Link>
 
             <Link
-              href="https://forms.gle/YOUR_COLLABORATE_FORM_LINK"
+              href="http://bit.ly/4kPKaEJ"
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center justify-center 
@@ -123,7 +123,7 @@ export default function Hero() {
                          transition-all duration-300 ease-out
                          border-2 border-white/50 "
             >
-              <span>Collaborate</span>
+              <span>Volunteer</span>
             </Link>
 
             <Link

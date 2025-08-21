@@ -26,7 +26,17 @@
 }
 
 body {
-  background: var(--background);
+  background: linear-gradient(
+  135deg,
+  rgba(255, 213, 172, 0.2),
+  rgba(112, 199, 217, 0.2),
+  rgba(145, 116, 234, 0.2),
+  rgba(239, 178, 217, 0.2)
+) fixed;
+
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -44,6 +54,19 @@ html {
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+/* Flashy cycling colors for Register text */
+@keyframes brandColorCycle {
+  0% { color: #ffd5ac; }
+  25% { color: #70c7d9; }
+  50% { color: #9174ea; }
+  75% { color: #efb2d9; }
+  100% { color: #ffd5ac; }
+}
+
+.animate-brand-text {
+  animation: brandColorCycle 1s linear infinite;
 }
 
 @keyframes border-rotate {
