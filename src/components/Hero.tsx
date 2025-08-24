@@ -6,9 +6,9 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section 
-  id="home" 
-  className="relative h-screen flex items-center justify-center overflow-hidden"
->
+      id="home" 
+      className="relative h-screen flex items-center justify-center overflow-hidden"
+    >
       {/* Background Video */}
       <video
         className="absolute inset-0 w-full h-full object-cover -z-10"
@@ -18,8 +18,6 @@ export default function Hero() {
         muted
         playsInline
       />
-      {/* Overlay */}
-      {/* { <div className="absolute inset-0 -z-10 bg-black/40" /> } */}
 
       {/* Content */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full relative z-10">
@@ -45,15 +43,15 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-6 flex flex-col items-center"
           >
-            {/* <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-wide max-w-6xl mx-auto leading-relaxed ">
-              Get to experience some great stuff
-            </h1> */}
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white tracking-wide max-w-6xl mx-auto leading-relaxed">
               Telangana&apos;s Largest Mental Wellness Event
             </h1>
             
-             {/* Dynamic dotted line for tagline - matches text width */}
-             <div className="mt-2 border-t-2 border-dotted border-white/70" style={{width: "min(100%, 100rem)"}}></div>
+            {/* Dotted line */}
+            <div 
+              className="mt-2 border-t-2 border-dotted border-white/70" 
+              style={{width: "min(100%, 100rem)"}} 
+            ></div>
           </motion.div>
 
           {/* Event Details */}
@@ -75,21 +73,12 @@ export default function Hero() {
               </p>
             </div>
             
-            {/* Dynamic dotted line for event details */}
-            <div className="mt-2 border-t-2 border-dotted border-white/70" style={{width: "min(100%, 100rem)"}}></div>
+            {/* Dotted line */}
+            <div 
+              className="mt-2 border-t-2 border-dotted border-white/70" 
+              style={{width: "min(100%, 100rem)"}} 
+            ></div>
           </motion.div>
-
-          {/* Call to Action Section */}
-          {/* <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.14 }}
-            className="mt-6"
-          >
-            <h2 className="text-base sm:text-lg md:text-xl font-bold text-white tracking-wide mb-6">
-              Join the Movement • Transform Lives • Make Impact
-            </h2>
-          </motion.div> */}
 
           {/* Buttons */}
           <motion.div
@@ -98,6 +87,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.16 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-6"
           >
+            {/* Register Now */}
             <Link
               href="https://pages.razorpay.com/pl_QsPAqay3600bdQ/view"
               target="_blank"
@@ -108,13 +98,14 @@ export default function Hero() {
                          bg-gray-100/10
                          text-white text-base font-semibold tracking-wide
                          hover:bg-purple-600 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30
-                         active:bg-blue-700
+                         active:bg-purple-600
                          transition-all duration-300 ease-out
                          border-2 border-white/50 "
             >
               <span>Register Now</span>
             </Link>
 
+            {/* Volunteer */}
             <Link
               href="http://bit.ly/4kPKaEJ"
               target="_blank"
@@ -122,16 +113,17 @@ export default function Hero() {
               className="group inline-flex items-center justify-center 
                          w-52 h-14 
                          rounded-tl-3xl rounded-br-3xl 
-                          bg-gray-100/10
+                         bg-gray-100/10
                          text-white text-base font-bold tracking-wide
-                         hover:bg-purple-600  hover:scale-105 hover:shadow-2xl hover:shadow-green-500/30
-                         active:bg-green-700
+                         hover:bg-purple-600 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/30
+                         active:bg-purple-600
                          transition-all duration-300 ease-out
                          border-2 border-white/50 "
             >
               <span>Volunteer</span>
             </Link>
 
+            {/* Partner */}
             <Link
               href="https://forms.gle/fmbtFu886Ju3rxS28"
               target="_blank"
@@ -141,8 +133,8 @@ export default function Hero() {
                          rounded-tl-3xl rounded-br-3xl 
                          bg-gray-100/10
                          text-white text-base font-bold tracking-wide
-                         hover:bg-purple-600   hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/30
-                         active:bg-yellow-600
+                         hover:bg-purple-600 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/30
+                         active:bg-purple-600
                          transition-all duration-300 ease-out
                          border-2 border-white/50 "
             >

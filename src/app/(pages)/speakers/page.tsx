@@ -17,12 +17,12 @@ export default function SpeakersPage() {
           <p className="text-lg text-black/70 dark:text-white/70 mb-6">
           Get inspired by the best — leaders, innovators, and change-makers.
           </p>
-          <a
+          {/* <a
             href="#"
             className="inline-block bg-purple-600 hover:bg-purple-800 text-white rounded px-6 py-3 transition-colors text-md font-semibold shadow-md hover:shadow-lg transform hover:scale-105"
           >
             Book Your Stall
-          </a>
+          </a> */}
         </div>
       </div>
 

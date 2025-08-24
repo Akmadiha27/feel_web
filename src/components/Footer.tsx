@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Instagram, Phone } from "lucide-react";
+import { Instagram, Phone, LinkedinIcon } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -26,14 +26,52 @@ export default function Footer() {
                 <Instagram className="h-5 w-5 text-black/80" />
                 <span className="font-semibold text-black/90">Follow Us</span>
               </div>
-              <Link 
-                href="https://www.instagram.com/feelbygoodmind?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+              <Link
+                href="https://www.instagram.com/feelbygoodmind?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 target="_blank"
                 className="inline-flex items-center gap-2 text-black/70 hover:text-black transition-colors group"
               >
                 <span className="text-base">@feelbygoodmind</span>
-                <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                <svg
+                  className="w-3 h-3 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </Link>
+            </div>
+
+            {/* LinkedIn Section (below Instagram) */}
+            <div className="space-y-3">
+              <div className="flex items-center gap-2">
+                <LinkedinIcon className="h-5 w-5 text-black/80" />
+                <span className="font-semibold text-black/90">Connect with Us</span>
+              </div>
+              <Link
+                href="https://www.linkedin.com/company/goodmindapp/"
+                target="_blank"
+                className="inline-flex items-center gap-2 text-black/70 hover:text-black transition-colors group"
+              >
+                <span className="text-base">GoodMind.app</span>
+                <svg
+                  className="w-3 h-3 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
                 </svg>
               </Link>
             </div>
@@ -51,14 +89,24 @@ export default function Footer() {
           {/* Goodmind Section */}
           <div className="space-y-4">
             <div className="font-semibold text-black/90">Powered By</div>
-            <Link 
-              href="https://goodmind.app" 
+            <Link
+              href="https://goodmind.app"
               target="_blank"
               className="inline-flex items-center gap-2 text-black/70 hover:text-black transition-colors group"
             >
               <span className="text-lg font-medium">goodmind.app</span>
-              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              <svg
+                className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
               </svg>
             </Link>
             <p className="text-base text-black/60 leading-relaxed max-w-xs">
@@ -77,5 +125,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-
