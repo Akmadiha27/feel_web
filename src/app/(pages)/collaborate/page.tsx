@@ -4,9 +4,9 @@ import Image from "next/image";
 
 export default function VolunteerPage() {
   const images = [
-    "/carausal/group/g6.jpg",
-    "/carausal/group/g5.jpg",
-    "/carausal/group/g4.jpg",
+    "/carausal/group/g6.JPG",
+    "/carausal/group/g5.JPG",
+    "/carausal/group/g4.JPG",
     "/carausal/group/g1.jpg",
     "/carausal/group/g2.jpg",
     "/carausal/group/g3.jpg",
