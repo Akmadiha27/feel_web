@@ -55,7 +55,7 @@ export default function Footer() {
                 <span className="font-semibold text-black/90">Connect with Us</span>
               </div>
               <Link
-                href="https://www.linkedin.com/company/goodmindapp/"
+                href="https://www.linkedin.com/company/goodmindapp-co/"
                 target="_blank"
                 className="inline-flex items-center gap-2 text-black/70 hover:text-black transition-colors group"
               >
