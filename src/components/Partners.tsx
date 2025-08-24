@@ -49,7 +49,7 @@ export default function Partners() {
             {partnerImages.map((partner, index) => (
               <div
                 key={index}
-                className="shrink-0 grow-0 basis-40 h-20 relative grayscale opacity-80 hover:opacity-100 transition-opacity"
+                className="shrink-0 grow-0 basis-96 h-0 relative grayscale opacity-80 hover:opacity-100 transition-opacity"
               >
                 <Image
                   src={partner.src}

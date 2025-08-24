@@ -2,12 +2,13 @@ import Link from "next/link";
 import Hero from "./Hero";
 import HomeThrowbackCarousel from "@/components/HomeThrowbackCarousel";
 import { agenda, stalls } from "@/data";
-import { Users, Mic, Store, Eye } from "lucide-react"; // ✅ Replace emojis with icons
+import { Users, Mic, Store, Eye, Heart, Palette, MessageCircle, Users2, Lightbulb, Shield } from "lucide-react";
 
 export default function Sections() {
   return (
     <>
       <Hero />
+      
       {/* About Section */}
       <section className="py-10" aria-labelledby="home-about">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -24,7 +25,7 @@ export default function Sections() {
             <div>
               <h2 id="home-about" className="text-2xl font-semibold tracking-tight inline-block border-b-2 border-[var(--color-brand-sand)]">About</h2>
               <p className="mt-4 text-black/70 dark:text-white/70 leading-relaxed">
-              FEEL is the flagship annual event by GoodMind Care Foundation and Telangana’s largest mental health awareness initiative. Since its inception in 2021, FEEL has reached 10M+ people online, welcomed over 7,000 attendees, and provided direct support to 15,000+ individuals through assessments and counselling.
+              FEEL is the flagship annual event by GoodMind Care Foundation and Telangana&apos;s largest mental health awareness initiative. Since its inception in 2021, FEEL has reached 10M+ people online, welcomed over 7,000 attendees, and provided direct support to 15,000+ individuals through assessments and counselling.
 
 Now entering its 5th edition, FEEL has evolved into a movement that creates safe and creative spaces for dialogue on mental health. From art therapy sessions and anonymous counselling to expert panels, open mics, and wellness workshops, the festival champions both expression and healing.
 
@@ -38,201 +39,132 @@ By normalizing conversations on mental health and encouraging early help-seeking
         </div>
       </section>
 
-      
-      
-
       {/* Wrapper with gradient background for both sections */}
-<div className="relative">
-  {/* Light gradient background */}
-  <div className="absolute inset-0 -z-10 bg-[linear-gradient(135deg,#ffd5ac,#70c7d9,#9174ea,#efb2d9)] opacity-60" />
+      <div className="relative">
+        {/* Light gradient background */}
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(135deg,#ffd5ac,#70c7d9,#9174ea,#efb2d9)] opacity-60" />
 
-  {/* Stats Section */}
-  <section 
-    className="py-10 pb-0 relative" 
-    aria-labelledby="home-stats"
-  >
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
-      <h2 id="home-stats" className="sr-only">Stats</h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-        {[
-          { n: "10000+", l: "Previous Participants", i: <Users className="w-7 h-7 text-[#70c7d9]" /> },
-          { n: "30+", l: "Speakers", i: <Mic className="w-7 h-7 text-[#9174ea]" /> },
-          { n: "100+", l: "Stalls", i: <Store className="w-7 h-7 text-[#ffd5ac]" /> },
-          { n: "3M+", l: "Impressions", i: <Eye className="w-7 h-7 text-[#efb2d9]" /> },
-        ].map((s, i) => (
-          <div
-            key={i}
-            className="rounded-xl p-6 border border-black/10 dark:border-white/10 
-                      bg-white/90 dark:bg-black/30 
-                      text-center hover:-translate-y-1 hover:shadow-xl transition 
-                      ring-1 ring-transparent hover:ring-[#70c7d9]/40"
-          >
-            <div className="flex justify-center mb-2">{s.i}</div>
-            <div className="text-3xl font-bold tracking-tight">{s.n}</div>
-            <div className="text-base mt-1 text-black/70 dark:text-white/70">{s.l}</div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  {/* Partner Marquee Section - seamless connection to Stats */}
-  <div className="relative">
-  <div className="h-[10vh] mt-10 bg-white overflow-hidden -rotate-2 origin-center relative z-10 
-                  border-t-1 border-b-1 border-[#70c7d9] shadow-md">
-    <div className="marquee flex items-center gap-8 h-full px-4">
-      {[
-        "Feel",
-        "⭐",
-        "Hyderabad, India",
-        "⭐",
-        "Telangana&apos;s Largest Mental Wellness Event",
-        "⭐",
-        "Feel",
-        "⭐",
-        "Hyderabad, India",
-        "⭐",
-        "Telangana&apos;s Largest Mental Wellness Event",
-        "⭐",
-        "Feel"
-      ].map((text, idx) => (
-        <span
-          key={idx}
-          className="text-black/70 dark:text-white/70 font-semibold text-lg whitespace-nowrap"
+        {/* Stats Section */}
+        <section 
+          className="py-10 pb-10 relative" 
+          aria-labelledby="home-stats"
         >
-          {text}
-        </span>
-      ))}
-    </div>
-  </div>
-</div>
-</div>
-
-
-      <section className="py-10" aria-labelledby="home-agenda">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 id="home-agenda" className="text-2xl font-semibold tracking-tight inline-block border-b-2 border-[var(--color-brand-sand)] mb-4">Agenda</h2>
-            <p className="text-black/70 dark:text-white/70">Preview of what&apos;s coming at FEEL</p>
-          </div>
-          
-          {/* Agenda Preview Cards */}
-          <div className="grid gap-4 max-w-4xl mx-auto mb-8">
-            {agenda.slice(0, 3).map((item, idx) => (
-              <div 
-                key={idx} 
-                className="bg-white/90 dark:bg-gray-800/90 shadow-md rounded-lg p-4 border border-black/10 dark:border-white/10 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="bg-[#70c7d9] text-white text-sm font-semibold px-3 py-1 rounded-full">
-                    {item.time}
-                  </div>
-                  <div className="text-sm text-[#9174ea] font-medium">
-                    {item.day}
-                  </div>
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
+            <h2 id="home-stats" className="sr-only">Stats</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {[
+                { n: "10000+", l: "Previous Participants", i: <Users className="w-7 h-7 text-[#70c7d9]" /> },
+                { n: "30+", l: "Speakers", i: <Mic className="w-7 h-7 text-[#9174ea]" /> },
+                { n: "100+", l: "Stalls", i: <Store className="w-7 h-7 text-[#ffd5ac]" /> },
+                { n: "3M+", l: "Impressions", i: <Eye className="w-7 h-7 text-[#efb2d9]" /> },
+              ].map((s, i) => (
+                <div
+                  key={i}
+                  className="rounded-xl p-6 border border-black/10 dark:border-white/10 
+                            bg-white/90 dark:bg-black/30 
+                            text-center hover:-translate-y-1 hover:shadow-xl transition 
+                            ring-1 ring-transparent hover:ring-[#70c7d9]/40"
+                >
+                  <div className="flex justify-center mb-2">{s.i}</div>
+                  <div className="text-3xl font-bold tracking-tight">{s.n}</div>
+                  <div className="text-base mt-1 text-black/70 dark:text-white/70">{s.l}</div>
                 </div>
-                <h3 className="text-lg font-semibold text-black/90 dark:text-white/90 mb-2">
-                  {item.title}
-                </h3>
-                {item.speaker && (
-                  <div className="text-sm text-[#efb2d9] font-medium">
-                    {item.speaker}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* Know More Button */}
-          <div className="text-center">
-            <Link 
-              href="/agenda" 
-              className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-md hover:bg-gray-800 font-medium transition-colors"
-            >
-              Know More
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-10" aria-labelledby="home-stalls">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex items-end justify-between">
-            <h2 id="home-stalls" className="text-2xl font-semibold tracking-tight inline-block border-b-2 border-[var(--color-brand-sand)]">Stalls</h2>
-            <Link href="/stalls" className="text-sm text-blue-600 hover:text-blue-500">View All</Link>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
-            {stalls.slice(0, 4).map((stall) => {
-              return (
-                <div key={stall.id} className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-4">
-                  <div className="flex items-start gap-4">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/coming-soon.svg" alt="Coming Soon" className="w-14 h-14 rounded-md object-cover border border-black/10 dark:border-white/10" />
-                    <div className="flex-1">
-                      <div className="font-medium">Coming Soon</div>
-                      <p className="text-sm text-black/70 dark:text-white/70 mt-1">Coming Soon</p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-                           <section className="py-10" aria-labelledby="home-partners">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h2 id="home-partners" className="text-2xl font-semibold tracking-tight inline-block border-b-2 border-[var(--color-brand-sand)] mb-8">Partners</h2>
-              
-              {/* Single image with all partner logos */}
-              <div className="max-w-4xl mx-auto mb-8">
-                <img 
-                  src="/partners/all-partners.svg" 
-                  alt="All Partners" 
-                  className="w-full h-auto  opacity-80 hover:opacity-100 transition-opacity bg-white rounded-lg p-[2px]" 
-                />
-              </div>
-              
-              {/* Know More button */}
-              <Link 
-                href="/partners" 
-                className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-md hover:bg-blue-500 font-medium transition-colors"
-              >
-                Know More
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
+              ))}
             </div>
           </div>
         </section>
 
-      {/* Highlights Grid */}
+        {/* Partner Marquee Section - seamless connection to Stats */}
+        {/* <div className="relative">
+        <div className="h-[10vh] mt-0 bg-transparent overflow-hidden">
+          { <div className="marquee flex items-center gap-8 h-full px-4">
+            {[
+              "Feel",
+              "⭐",
+              "Hyderabad, India",
+              "⭐",
+              "Telangana&apos;s Largest Mental Wellness Event",
+              "⭐",
+              "Feel",
+              "⭐",
+              "Hyderabad, India",
+              "⭐",
+              "Telangana&apos;s Largest Mental Wellness Event",
+              "⭐",
+              "Feel"
+            ].map((text, idx) => (
+              <span
+                key={idx}
+                className="text-black/70 dark:text-white/70 font-semibold text-lg whitespace-nowrap"
+              >
+                {text}
+              </span>
+            ))}
+          </div> }
+        </div>
+      </div> */}
+      </div>
+      
+      {/* Highlights Section */}
       <section className="py-10" aria-labelledby="home-highlights">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 id="home-highlights" className="text-2xl font-semibold tracking-tight inline-block border-b-2 border-[var(--color-brand-sand)]">Highlights</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+          <h2 id="home-highlights" className="text-2xl font-semibold tracking-tight inline-block border-b-2 border-[var(--color-brand-sand)] mb-8">Highlights</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { h: "Primary Focus", d: "Working professionals, students and employee mental wellness" },
-              { h: "Healing", d: "Art Therapy & Finger Painting to promote healing through creative expression" },
-              { h: "Counselling Booths", d: "Anonymous Counseling Booths for confidential and stigma-free mental health support and guidance." },
-              { h: "Panels", d: "Expert Panels featuring psychologists, celebrities, founders, HR leaders" },
-              { h: "Stalls", d: "Healthcare-focused stalls, and diverse Pan-India participation from hospitals, startups & health tech brands" },
-              { h: "Community", d: "Community Open Mic to encourage emotional expression through stories, poetry, & music" },
+              { 
+                h: "Wellness Focus", 
+                d: "Working professionals, students and employee mental wellness",
+                icon: <Heart className="w-8 h-8 text-[#efb2d9]" />
+              },
+              { 
+                h: "Art Therapy", 
+                d: "Art Therapy & Finger Painting to promote healing through creative expression",
+                icon: <Palette className="w-8 h-8 text-[#9174ea]" />
+              },
+              { 
+                h: "Counselling", 
+                d: "Anonymous Counseling Booths for confidential and stigma-free mental health support and guidance.",
+                icon: <Shield className="w-8 h-8 text-[#70c7d9]" />
+              },
+              { 
+                h: "Expert Panels", 
+                d: "Expert Panels featuring psychologists, celebrities, founders, HR leaders",
+                icon: <Users2 className="w-8 h-8 text-[#ffd5ac]" />
+              },
+              { 
+                h: "Interactive Stalls", 
+                d: "Healthcare-focused stalls, and diverse Pan-India participation from hospitals, startups & health tech brands",
+                icon: <Store className="w-8 h-8 text-[#9174ea]" />
+              },
+              { 
+                h: "Community Open Mic", 
+                d: "Community Open Mic to encourage emotional expression through stories, poetry, & music",
+                icon: <MessageCircle className="w-8 h-8 text-[#efb2d9]" />
+              },
             ].map((it, i) => (
               <div key={i} className="rounded-xl p-6 border border-black/10 dark:border-white/10 bg-white/80 dark:bg-black/30 hover:-translate-y-1 hover:shadow-lg transition ring-1 ring-transparent hover:ring-[var(--color-brand-pink)]">
-                <div className="font-semibold">{it.h}</div>
-                <p className="text-sm text-black/70 dark:text-white/70 mt-2">{it.d}</p>
+                <div className="flex justify-center mb-4">{it.icon}</div>
+                <div className="font-semibold text-center">{it.h}</div>
+                <p className="text-sm text-black/70 dark:text-white/70 mt-2 text-center">{it.d}</p>
               </div>
             ))}
+          </div>
+          
+          {/* Register Button below Highlights */}
+          <div className="text-center mt-10">
+            <a
+              href="https://pages.razorpay.com/pl_QsPAqay3600bdQ/view"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block  bg-purple-600 hover:bg-purple-800  text-white rounded px-8 py-4  transition-colors text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              Register Now
+            </a>
           </div>
         </div>
       </section>
 
+      {/* Throwback Section */}
       <section className="py-10" aria-labelledby="home-throwback">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-end justify-between">
@@ -250,39 +182,240 @@ By normalizing conversations on mental health and encouraging early help-seeking
           </div>
         </div>
       </section>
-
-            <section className="py-10" aria-labelledby="home-collaborate">
+      
+      {/* Register Now Section */}
+      <section className="py-0 text-center" aria-labelledby="home-register">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 id="home-collaborate" className="text-2xl font-semibold tracking-tight inline-block border-b-2 border-[var(--color-brand-sand)]">Collaborate</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-            {[
-              { h: "Register", d: "Register and join the movement.", href: "https://pages.razorpay.com/pl_QsPAqay3600bdQ/view" },
-              { h: "Volunteer", d: "Volunteer and gain experience, click below to apply.", href: "http://bit.ly/4kPKaEJ" },
-              { h: "Partner", d: "Partner with us to create impact.", href: "https://docs.google.com/forms/d/e/1FAIpQLSegcmy5lpwL6Irg0hQnbPSV1bn9z3KnvEcIcnjWgBt3uVbAGA/viewform" },
-              { h: "Sponsor", d: "Support FEEL as a sponsor.", href: "https://forms.gle/your-sponsor-form" },
-            ].map((b, i) => (
-              <div key={i} className="relative bg-white/95 dark:bg-gray-800/95 shadow-md rounded-lg p-4 border border-black/10 dark:border-white/10 overflow-hidden hover:border-[#ffd5ac] hover:border-2 transition-all duration-300">
-                <div className="font-semibold text-lg">{b.h}</div>
-                <p className="text-sm text-black/70 dark:text-white/70 mt-1">{b.d}</p>
-                <a href={b.href} target="_blank" rel="noopener noreferrer" className="inline-block mt-3 bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 text-sm font-medium transition-colors">{b.h}</a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Register CTA Section */}
-      <section className="py-10 text-center" aria-labelledby="home-register">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 id="home-register" className="text-3xl sm:text-4xl font-bold tracking-tight">Still thinking? Just join us — and truly FEEL it.</h2>
-          <h2 id="home-register" className="mt-3 text-3xl sm:text-4xl font-bold tracking-tight">Register Here</h2>
+          {/* <h2 id="home-register" className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">Register Now</h2> */}
           <a
             href="https://pages.razorpay.com/pl_QsPAqay3600bdQ/view"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-6 bg-black text-white rounded px-6 py-3 hover:bg-gray-800 transition-colors"
+            className="inline-block  bg-purple-600 hover:bg-purple-800  text-white rounded px-8 py-4  transition-colors text-lg font-semibold"
           >
-            Register
+            Register Now
+          </a>
+        </div>
+      </section>
+
+
+      {/* Agenda Section
+      <section className="py-10" aria-labelledby="home-agenda">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className=" mb-8">
+            <h2 id="home-agenda" className="text-2xl font-semibold tracking-tight inline-block border-b-2 border-[var(--color-brand-sand)] mb-4">Agenda</h2>
+            <p className="text-black/70 dark:text-white/70">Preview of what&apos;s coming at FEEL</p> 
+          </div>
+          
+          Coming Soon Box 
+          <div className="max-w-4xl mx-auto mb-8">
+            <div className="bg-white/90 dark:bg-gray-800/90 shadow-md rounded-lg p-12 border border-black/10 dark:border-white/10 text-center">
+              <div className="text-6xl mb-4">📅</div>
+              <h3 className="text-2xl font-bold text-black/90 dark:text-white/90 mb-4">Coming Soon</h3>
+              <p className="text-lg text-black/70 dark:text-white/70">
+                Our exciting agenda will be announced soon. Stay tuned for an amazing lineup of events, speakers, and activities!
+              </p>
+            </div>
+          </div>
+
+          Commented out Agenda Boxes 
+          <div className="max-w-4xl mx-auto mb-8">
+            <div className="bg-white/90 dark:bg-gray-800/90 shadow-md rounded-lg p-6 border border-black/10 dark:border-white/10">
+              <div className="grid gap-4">
+                {agenda.slice(0, 3).map((item, idx) => (
+                  <div key={idx} className="flex items-center gap-3 p-3 border-b border-gray-200 last:border-b-0">
+                    <div className="bg-[#70c7d9] text-white text-sm font-semibold px-3 py-1 rounded-full">
+                      {item.time}
+                    </div>
+                    <div className="text-sm text-[#9174ea] font-medium">
+                      {item.day}
+                    </div>
+                    <h3 className="text-lg font-semibold text-black/90 dark:text-white/90 flex-1">
+                      {item.title}
+                    </h3>
+                    {item.speaker && (
+                      <div className="text-sm text-[#efb2d9] font-medium">
+                        {item.speaker}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div> 
+
+
+          Know More Button 
+          <div className="text-center">
+            <Link 
+              href="/agenda" 
+              className="inline-flex items-center gap-2 bg-purple-600 text-white px-8 py-4 rounded-md hover:bg-purple-800 font-medium transition-colors"
+            >
+              Know More
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div> 
+        </div>
+      </section> */}
+
+      
+      
+      {/* Stalls Section */}
+      <section className="py-10 pb-0" aria-labelledby="home-stalls">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex items-end justify-between mb-6">
+            <h2 id="home-stalls" className="text-2xl font-semibold tracking-tight inline-block border-b-2 border-[var(--color-brand-sand)]">Stalls</h2>
+            <Link href="/stalls" className="text-sm text-purple-600 hover:text-purple-800">View All</Link>
+          </div>
+          
+          {/* Single Stalls Box */}
+          {/* <div className="max-w-4xl mx-auto mb-8">
+            <div className="bg-white/90 dark:bg-gray-800/90 shadow-md rounded-lg p-6 border border-black/10 dark:border-white/10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {stalls.slice(0, 4).map((stall) => (
+                  <div key={stall.id} className="flex items-start gap-4 p-3 border border-gray-200 rounded-lg">
+                    <img src="/coming-soon.svg" alt="Coming Soon" className="w-14 h-14 rounded-md object-cover border border-black/10 dark:border-white/10" />
+                    <div className="flex-1">
+                      <div className="font-medium">Coming Soon</div>
+                      <p className="text-sm text-black/70 dark:text-white/70 mt-1">Coming Soon</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div> */}
+        
+
+        {/* Coming Soon Box */}
+        <div className="max-w-4xl mx-auto mb-8">
+            <div className="bg-white/90 dark:bg-gray-800/90 shadow-md rounded-lg p-12 border border-black/10 dark:border-white/10 text-center">
+              <div className="text-6xl mb-4">🛍️</div>
+              <h3 className="text-2xl font-bold text-black/90 dark:text-white/90 mb-4">Coming Soon</h3>
+              <p className="text-lg text-black/70 dark:text-white/70">
+              Get ready to experience our upcoming Interactive Stalls! Don’t miss your chance — book your stall today!
+              </p>
+            </div>
+          </div>
+          </div>
+
+          
+
+      {/* Book Stall  Now Section */}
+      <section className="py-0 text-center" aria-labelledby="home-register">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* <h2 id="home-register" className="text-3xl sm:text-4xl font-bold tracking-tight mb-6">Register Now</h2> */}
+          <a
+            href="https://forms.gle/fmbtFu886Ju3rxS28"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block  bg-purple-600 hover:bg-purple-800  text-white rounded px-8 py-4  transition-colors text-lg font-semibold"
+          >
+            Book Your Stall Now
+          </a>
+        </div>
+      </section>
+
+      </section>
+
+      
+
+      {/* Partners Section */}
+      <section className="py-10" aria-labelledby="home-partners">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div >
+            <h2 id="home-partners" className="text-2xl font-semibold tracking-tight inline-block border-b-2 border-[var(--color-brand-sand)] mb-8">Partners</h2>
+            </div>
+            {/* Original partners carousel */}
+            {/* <div className="max-w-4xl mx-auto mb-8">
+              <img 
+                src="/partners/all-partners.svg" 
+                alt="All Partners" 
+                className="w-full h-auto opacity-80 hover:opacity-100 transition-opacity bg-white rounded-lg p-[2px]" 
+              />
+            </div> */}
+            <div className="text-center">
+            {/* New horizontal scroll carousel */}
+            <div className="max-w-6xl mx-auto mb-8">
+              <div className="overflow-hidden">
+                <div className="flex gap-8 animate-scroll">
+                  {[
+                    "/partners/p1.png", "/partners/p2.png", "/partners/p3.png", "/partners/p4.png",
+                    "/partners/p5.png", "/partners/p6.png", "/partners/p7.jpeg", "/partners/p8.png",
+                    "/partners/p9.png", "/partners/p10.png", "/partners/p11.png", "/partners/p12.jpeg",
+                    "/partners/p13.jpeg", "/partners/p14.png", "/partners/p15.jpeg", "/partners/p16.jpeg",
+                    "/partners/p17.png", "/partners/p18.png", "/partners/p19.png", "/partners/p20.jpeg",
+                    "/partners/p21.png"
+                  ].map((logo, index) => (
+                    <div key={index} className="flex-shrink-0 w-60 h-40 bg-white rounded-lg p-2 border border-gray-200">
+                      <img 
+                        src={logo} 
+                        alt={`Partner ${index + 1}`} 
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+            
+            {/* Know More button */}
+            <Link 
+              href="/partners" 
+              className="inline-flex items-center gap-2 bg-purple-600 text-white px-8 py-4 rounded-md hover:bg-purple-800 font-medium transition-colors"
+            >
+              Know More
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Volunteer Section */}
+      <section className="py-10" aria-labelledby="home-volunteer">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 id="home-volunteer" className="text-2xl font-semibold tracking-tight inline-block border-b-2 border-[var(--color-brand-sand)] mb-6">Volunteer</h2>
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/90 dark:bg-gray-800/90 shadow-md rounded-lg p-12 border border-black/10 dark:border-white/10 text-center">
+              <div className="font-bold text-2xl mb-3">Volunteer and gain experience</div>
+              <p className="text-lg text-black/70 dark:text-white/70 mb-6">
+                Join our team of dedicated volunteers and help us create an impactful mental health awareness event. 
+                Gain valuable experience while making a difference in the community.
+              </p>
+              <a 
+                href="http://bit.ly/4kPKaEJ" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-block bg-purple-600 text-white px-8 py-4 rounded-md hover:bg-purple-800 text-sm font-medium transition-colors"
+              >
+                Apply Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+
+      {/* Final Register CTA Section */}
+      <section className="py-16 text-center bg-gradient-to-r from-[#ffd5ac]/20 via-[#70c7d9]/20 to-[#9174ea]/20" aria-labelledby="final-register">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 id="final-register" className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+            Still thinking? Just join us — and truly FEEL it.
+          </h2>
+          <h3 className="text-2xl sm:text-3xl font-bold tracking-tight mb-8">
+            Register Here
+          </h3>
+          <a
+            href="https://pages.razorpay.com/pl_QsPAqay3600bdQ/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-purple-600 text-white rounded px-8 py-4 hover:bg-purple-800 transition-colors text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
+          >
+            Register Now
           </a>
         </div>
       </section>

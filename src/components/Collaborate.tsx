@@ -38,7 +38,7 @@ export default function Collaborate() {
           <input name="email" type="email" required placeholder="Your email" className="w-full rounded-md border border-black/10 dark:border-white/10 bg-transparent px-3 py-2" />
           <textarea name="message" required placeholder="Your message" className="w-full rounded-md border border-black/10 dark:border-white/10 bg-transparent px-3 py-2 h-28" />
           <div className="flex gap-3 items-center">
-            <button disabled={loading} className="inline-flex items-center justify-center rounded-md bg-black text-white dark:bg-white dark:text-black px-4 py-2 text-sm font-medium disabled:opacity-60">
+            <button disabled={loading} className="inline-flex items-center justify-center rounded-md bg-black text-white dark:bg-white dark:text-black px-8 py-4 text-sm font-medium disabled:opacity-60">
               {loading ? "Sending..." : "Send"}
             </button>
             <a href="mailto:hello@feel.events" className="text-sm underline">or email us</a>

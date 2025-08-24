@@ -5,7 +5,10 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section 
+  id="home" 
+  className="relative h-screen flex items-center justify-center overflow-hidden"
+>
       {/* Background Video */}
       <video
         className="absolute inset-0 w-full h-full object-cover -z-10"
@@ -16,7 +19,7 @@ export default function Hero() {
         playsInline
       />
       {/* Overlay */}
-      <div className="absolute inset-0 -z-10 bg-black/40" />
+      {/* { <div className="absolute inset-0 -z-10 bg-black/40" /> } */}
 
       {/* Content */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full relative z-10">
@@ -31,7 +34,7 @@ export default function Hero() {
             <img
               src="/hero-image.png"
               alt="FEEL Logo"
-              className="w-100 sm:w-120 md:w-140 h-auto mx-auto drop-shadow-2xl"
+              className="w-100 mt-10 sm:w-120 md:w-140 h-auto mx-auto drop-shadow-2xl"
             />
           </motion.div>
 
@@ -42,7 +45,10 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-6 flex flex-col items-center"
           >
-                          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white tracking-wide max-w-6xl mx-auto leading-relaxed">
+            {/* <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-wide max-w-6xl mx-auto leading-relaxed ">
+              Get to experience some great stuff
+            </h1> */}
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white tracking-wide max-w-6xl mx-auto leading-relaxed">
               Telangana&apos;s Largest Mental Wellness Event
             </h1>
             
@@ -65,7 +71,7 @@ export default function Hero() {
                 <span className="text-white/70 font-light">|</span>
                 <span className="font-semibold">Hyderabad</span>
                 <span className="text-white/70 font-light">|</span>
-                <span className="font-bold">9 AM Onwards</span>
+                <span className="font-bold">11 AM Onwards</span>
               </p>
             </div>
             
@@ -101,7 +107,7 @@ export default function Hero() {
                          rounded-tl-3xl rounded-br-3xl 
                          bg-gray-100/10
                          text-white text-base font-semibold tracking-wide
-                         hover:bg-black hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30
+                         hover:bg-purple-600 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30
                          active:bg-blue-700
                          transition-all duration-300 ease-out
                          border-2 border-white/50 "
@@ -118,7 +124,7 @@ export default function Hero() {
                          rounded-tl-3xl rounded-br-3xl 
                           bg-gray-100/10
                          text-white text-base font-bold tracking-wide
-                         hover:bg-black  hover:scale-105 hover:shadow-2xl hover:shadow-green-500/30
+                         hover:bg-purple-600  hover:scale-105 hover:shadow-2xl hover:shadow-green-500/30
                          active:bg-green-700
                          transition-all duration-300 ease-out
                          border-2 border-white/50 "
@@ -127,7 +133,7 @@ export default function Hero() {
             </Link>
 
             <Link
-              href="https://docs.google.com/forms/d/e/1FAIpQLSegcmy5lpwL6Irg0hQnbPSV1bn9z3KnvEcIcnjWgBt3uVbAGA/viewform"
+              href="https://forms.gle/fmbtFu886Ju3rxS28"
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center justify-center 
@@ -135,7 +141,7 @@ export default function Hero() {
                          rounded-tl-3xl rounded-br-3xl 
                          bg-gray-100/10
                          text-white text-base font-bold tracking-wide
-                         hover:bg-black   hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/30
+                         hover:bg-purple-600   hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/30
                          active:bg-yellow-600
                          transition-all duration-300 ease-out
                          border-2 border-white/50 "

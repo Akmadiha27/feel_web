@@ -56,6 +56,17 @@ html {
   100% { transform: translateX(-50%); }
 }
 
+/* Horizontal scroll carousel animation */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+  width: max-content;
+}
+
 /* Flashy cycling colors for Register text */
 @keyframes brandColorCycle {
   0% { color: #ffd5ac; }
@@ -106,4 +117,13 @@ html {
   animation: border-rotate 6s linear infinite;
   background-size: 200% 200%;
   border-radius: 0.75rem; /* same as rounded-xl */
+}
+
+@keyframes scroll-slow {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll-slow {
+  animation: scroll-slow 10s linear infinite; /* slower speed */
 }

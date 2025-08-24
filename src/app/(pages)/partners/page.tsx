@@ -260,6 +260,49 @@ export default function PartnersPage() {
           </div>
         ))}
       </div>
+
+      {/* Carousel Section - Moved to bottom */}
+      <div className="mt-16">
+        <h2 className="text-2xl font-semibold tracking-tight mb-8 text-center">Partner Highlights</h2>
+        <div className="max-w-6xl mx-auto">
+          <div className="overflow-hidden">
+            <div className="flex gap-8 animate-scroll">
+              {[
+                "/partners/p1.png", "/partners/p2.png", "/partners/p3.png", "/partners/p4.png",
+                "/partners/p5.png", "/partners/p6.png", "/partners/p7.jpeg"
+              ].map((logo, index) => (
+                <div key={index} className="flex-shrink-0 w-40 h-32 bg-white rounded-lg p-3 border border-gray-200 shadow-md">
+                  <img 
+                    src={logo} 
+                    alt={`Partner Highlight ${index + 1}`} 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Final Register CTA Section */}
+      <section className="py-16 text-center bg-gradient-to-r from-[#ffd5ac]/20 via-[#70c7d9]/20 to-[#9174ea]/20 mt-16" aria-labelledby="final-register">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 id="final-register" className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+            Still thinking? Just join us — and truly FEEL it.
+          </h2>
+          <h3 className="text-2xl sm:text-3xl font-bold tracking-tight mb-8">
+            Register Here
+          </h3>
+          <a
+            href="https://pages.razorpay.com/pl_QsPAqay3600bdQ/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block  bg-purple-600 hover:bg-purple-800  text-white rounded px-8 py-4  transition-colors text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
+          >
+            Register Now
+          </a>
+        </div>
+      </section>
     </div>
   );
 }

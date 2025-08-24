@@ -9,7 +9,7 @@ export default function Register() {
           <p className="text-black/70 dark:text-white/70 mt-1">Secure your spot. Limited seats available.</p>
           <Link
             href="https://pages.razorpay.com/pl_QsPAqay3600bdQ/view" target="_blank" rel="noopener noreferrer"
-            className="inline-block mt-6 rounded-full px-6 py-3 bg-black text-white dark:bg-white dark:text-black text-sm font-medium hover:opacity-90"
+            className="inline-block mt-6 rounded-full px-8 py-4 bg-black text-white dark:bg-white dark:text-black text-sm font-medium hover:opacity-90"
           >
             Go to Registration
           </Link>
