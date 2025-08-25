@@ -6,10 +6,12 @@ import { stalls } from "@/data";
 export default function StallsPage() {
   const images = [
     "/carausal/stalls/s1.jpg",
-    "/carausal/stalls/s2.jpg",
-    "/carausal/stalls/s3.jpg",
-    "/carausal/stalls/s4.jpg",
     "/carausal/stalls/s5.jpg",
+    "/carausal/stalls/s3.jpg",
+    "/carausal/stalls/s6.jpg",
+    "/carausal/stalls/s4.jpg",
+    "/carausal/stalls/s2.jpg",
+    "/carausal/speakers/s10.JPG",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

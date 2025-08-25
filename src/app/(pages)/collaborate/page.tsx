@@ -11,6 +11,11 @@ export default function VolunteerPage() {
     "/carausal/group/g2.jpg",
     "/carausal/group/g3.jpg",
     "/carausal/group/g7.jpg",
+    "/carausal/group/g8.jpg",
+    "/carausal/audience/a1.JPG",
+    "/carausal/audience/a3.JPG",
+    "/carausal/audience/a15.JPG",
+    "/carausal/audience/a13.JPG",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

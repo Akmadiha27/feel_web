@@ -10,7 +10,7 @@ export default function Footer() {
           {/* FEEL Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <img src="/hero-image.png" alt="FEEL Logo" className="w-12 h-12 object-contain" />
+              <img src="/hero-image.png" alt="FEEL Logo" className="w-18 h-18 object-contain" />
               <div className="text-xl font-bold tracking-wide"></div>
             </div>
             <p className="text-base text-black/60 leading-relaxed max-w-xs">

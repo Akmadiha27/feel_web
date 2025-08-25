@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import HomeThrowbackCarousel from "@/components/HomeThrowbackCarousel";
 import { agenda, stalls } from "@/data";
 import { Users, Mic, Store, Eye, Heart, Palette, MessageCircle, Users2, Lightbulb, Shield } from "lucide-react";
+import SimpleCarousel from "@/components/SimpleCarousel";
 
 export default function Sections() {
   return (
@@ -398,7 +399,39 @@ By normalizing conversations on mental health and encouraging early help-seeking
         </div>
       </section>
 
-      
+      {/* Home Event Highlights Carousel (consistent with Stalls/Volunteer) */}
+      <section className="py-10" aria-labelledby="home-highlights-carousel">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 id="home-highlights-carousel" className="text-2xl font-semibold tracking-tight mb-8 text-center">Event Highlights</h2>
+          <div className="mt-2 relative max-w-3xl mx-auto">
+            <SimpleCarousel
+              images={[
+                "/carausal/stalls/s1.jpg",
+                "/carausal/stalls/s5.jpg",
+                "/carausal/stalls/s3.jpg",
+                "/carausal/stalls/s6.jpg",
+                "/carausal/stalls/s4.jpg",
+                "/carausal/stalls/s2.jpg",
+                "/carausal/speakers/s10.JPG",
+                "/carausal/group/g6.JPG",
+                "/carausal/group/g5.JPG",
+                "/carausal/group/g4.JPG",
+                "/carausal/group/g1.jpg",
+                "/carausal/group/g2.jpg",
+                "/carausal/group/g3.jpg",
+                "/carausal/group/g7.jpg",
+                "/carausal/group/g8.jpg",
+                "/carausal/audience/a1.JPG",
+                "/carausal/audience/a3.JPG",
+                "/carausal/audience/a15.JPG",
+                "/carausal/audience/a13.JPG",
+              ]}
+              imageClassName="object-contain"
+              heightClass="h-64 sm:h-80"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* Final Register CTA Section */}
       <section className="py-16 text-center bg-gradient-to-r from-[#ffd5ac]/20 via-[#70c7d9]/20 to-[#9174ea]/20" aria-labelledby="final-register">
