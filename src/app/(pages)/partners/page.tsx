@@ -1,4 +1,5 @@
 import Image from "next/image";
+import LogoMarquee from "@/components/LogoMarquee";
 
 export default function PartnersPage() {
   // Define all partners with their details
@@ -261,27 +262,19 @@ export default function PartnersPage() {
         ))}
       </div>
 
-      {/* Carousel Section - Moved to bottom */}
+      {/* Moving logo cloud consistent with home */}
       <div className="mt-16">
-        <h2 className="text-2xl font-semibold tracking-tight mb-8 text-center">Partner Highlights</h2>
-        <div className="max-w-6xl mx-auto">
-          <div className="overflow-hidden">
-            <div className="flex gap-8 animate-scroll">
-              {[
-                "/partners/p1.png", "/partners/p2.png", "/partners/p3.png", "/partners/p4.png",
-                "/partners/p5.png", "/partners/p6.png", "/partners/p7.jpeg"
-              ].map((logo, index) => (
-                <div key={index} className="flex-shrink-0 w-40 h-32 bg-white rounded-lg p-3 border border-gray-200 shadow-md">
-                  <img 
-                    src={logo} 
-                    alt={`Partner Highlight ${index + 1}`} 
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        <h2 className="text-2xl font-semibold tracking-tight mb-8 text-center">Our Partners</h2>
+        <LogoMarquee
+          logos={[
+            "/partners/p1.png", "/partners/p2.png", "/partners/p3.png", "/partners/p4.png",
+            "/partners/p5.png", "/partners/p6.png", "/partners/p7.jpeg", "/partners/p8.png",
+            "/partners/p9.png", "/partners/p10.png", "/partners/p11.png", "/partners/p12.jpeg",
+            "/partners/p13.jpeg", "/partners/p14.png", "/partners/p15.jpeg", "/partners/p16.jpeg",
+            "/partners/p17.png", "/partners/p18.png", "/partners/p19.png", "/partners/p20.jpeg",
+            "/partners/p21.png",
+          ]}
+        />
       </div>
 
       {/* Final Register CTA Section */}

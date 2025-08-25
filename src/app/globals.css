@@ -67,6 +67,38 @@ html {
   width: max-content;
 }
 
+/* Rightward marquee for two-row logo clouds */
+@keyframes scroll-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-scroll-right {
+  animation: scroll-right 30s linear infinite;
+  width: max-content;
+}
+
+/* Optimized logo marquee animations */
+@keyframes logo-scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+@keyframes logo-scroll-right {
+  0% { transform: translateX(-33.333%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-logo-scroll-left {
+  animation: logo-scroll-left 45s linear infinite;
+  width: max-content;
+}
+
+.animate-logo-scroll-right {
+  animation: logo-scroll-right 45s linear infinite;
+  width: max-content;
+}
+
 /* Flashy cycling colors for Register text */
 @keyframes brandColorCycle {
   0% { color: #ffd5ac; }
