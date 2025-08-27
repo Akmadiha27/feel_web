@@ -186,26 +186,25 @@ export default function Sections() {
 
       {/* Partners Section */}
       <section className="py-10" aria-labelledby="home-partners">
-        <div className="max-w-full px-0">
-        <h2
-          id="home-partners"
-          className="text-2xl font-semibold tracking-tight inline-block border-b-2 border-[var(--color-brand-sand)] mb-8 mx-auto text-center"
-        >
-          Partners
-        </h2>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2
+            id="home-partners"
+            className="text-2xl font-semibold tracking-tight inline-block border-b-2 border-[var(--color-brand-sand)] mb-8"
 
+          >
+            Partners
+          </h2>
 
           {/* Full-width logo marquee */}
           <LogoMarquee
             logos={[
               "/partners/p1.png", "/partners/p2.png", "/partners/p3.png", "/partners/p4.png",
-              "/partners/p5.png", "/partners/p6.png", "/partners/p7.jpeg", "/partners/p8.png",
-              "/partners/p9.png", "/partners/p10.png", "/partners/p11.png", "/partners/p12.jpeg",
-              "/partners/p13.jpeg", "/partners/p14.png", "/partners/p15.jpeg", "/partners/p16.jpeg",
-              "/partners/p17.png", "/partners/p18.png", "/partners/p19.png", "/partners/p20.jpeg",
+              "/partners/p5.png", "/partners/p6.png", "/partners/p7.png", "/partners/p8.png",
+              "/partners/p9.png", "/partners/p10.png", "/partners/p11.png", "/partners/p12.png",
+              "/partners/p13.jpeg", "/partners/p14.png", "/partners/p15.png", "/partners/p16.png",
+              "/partners/p17.png", "/partners/p18.png", "/partners/p19.png", "/partners/p20.png",
               "/partners/p21.png",
             ]}
-            //speed={20} // reduce speed (default is usually 40–50, so 20 is ~2x slower)
           />
 
           {/* Centered button */}
@@ -232,6 +231,7 @@ export default function Sections() {
           </div>
         </div>
       </section>
+
 
 
       {/* Volunteer Section */}
