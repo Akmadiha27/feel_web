@@ -35,7 +35,7 @@ export default function Navbar() {
           <img
             src="/GoodMindlogo.png"
             alt="FEEL Logo"
-            className="w-46 h-46 object-contain"
+            className="w-60 h-60 object-contain"
           />
         </Link>
 
