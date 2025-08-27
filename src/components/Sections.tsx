@@ -266,12 +266,12 @@ export default function Sections() {
             <SimpleCarousel
               images={[
                 "/carausal/stalls/s1.jpg", "/carausal/stalls/s5.jpg", "/carausal/stalls/s3.jpg",
-                "/carausal/stalls/s6.jpg", "/carausal/stalls/s4.jpg", "/carausal/stalls/s2.jpg",
+                "/carausal/stalls/s6.JPG", "/carausal/stalls/s4.jpg", "/carausal/stalls/s2.jpg",
                 "/carausal/speakers/s10.JPG", "/carausal/group/g6.JPG", "/carausal/group/g5.JPG",
                 "/carausal/group/g4.JPG", "/carausal/group/g1.jpg", "/carausal/group/g2.jpg",
-                "/carausal/group/g3.jpg", "/carausal/group/g7.jpg", "/carausal/group/g8.jpg",
-                "/carausal/audience/a1.JPG", "/carausal/audience/a3.JPG", "/carausal/audience/a15.JPG",
-                "/carausal/audience/a13.JPG",
+                "/carausal/group/g3.jpg", "/carausal/group/g7.jpg", "/carausal/group/g8.JPG",
+                "/carausal/audience/a1.JPG", "/carausal/audience/a3.JPG", "/carausal/audience/a15.jpg",
+                "/carausal/audience/a13.jpg",
               ]}
               imageClassName="object-contain"
               heightClass="h-64 sm:h-80"
