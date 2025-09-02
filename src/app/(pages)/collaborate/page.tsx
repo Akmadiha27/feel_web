@@ -30,8 +30,8 @@ export default function VolunteerPage() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
-      {/* Volunteer Section */}
-      <div className="mt-8 max-w-4xl mx-auto">
+      {/* Volunteer page content commented out */}
+      {/* <div className="mt-8 max-w-4xl mx-auto">
         <div className="bg-white/95 dark:bg-gray-800/95 shadow-md rounded-lg p-8 border border-black/10 dark:border-white/10">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-semibold mb-4">Join Our Volunteer Team</h2>
@@ -41,7 +41,6 @@ export default function VolunteerPage() {
             </p>
           </div>
 
-          {/* Volunteer Roles */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             {[
               {
@@ -75,7 +74,6 @@ export default function VolunteerPage() {
             ))}
           </div>
 
-          {/* Apply Button */}
           <div className="text-center">
             <a
               href="http://bit.ly/4kPKaEJ"
@@ -89,7 +87,6 @@ export default function VolunteerPage() {
         </div>
       </div>
 
-      {/* Carousel Section */}
       <div className="mt-10 relative max-w-3xl mx-auto">
         <div className="overflow-hidden rounded-lg">
           <div className="relative w-full h-64 sm:h-80">
@@ -102,7 +99,6 @@ export default function VolunteerPage() {
           </div>
         </div>
 
-        {/* Left Button */}
         <button
           onClick={prevSlide}
           className="absolute top-1/2 -left-6 transform -translate-y-1/2 bg-white/80 dark:bg-gray-800/80 p-3 rounded-full shadow-md hover:bg-white dark:hover:bg-gray-700 transition"
@@ -110,7 +106,6 @@ export default function VolunteerPage() {
           ◀
         </button>
 
-        {/* Right Button */}
         <button
           onClick={nextSlide}
           className="absolute top-1/2 -right-6 transform -translate-y-1/2 bg-white/80 dark:bg-gray-800/80 p-3 rounded-full shadow-md hover:bg-white dark:hover:bg-gray-700 transition"
@@ -118,7 +113,6 @@ export default function VolunteerPage() {
           ▶
         </button>
 
-        {/* Dots */}
         <div className="flex justify-center mt-4 gap-2">
           {images.map((_, idx) => (
             <button
@@ -132,7 +126,6 @@ export default function VolunteerPage() {
         </div>
       </div>
 
-      {/* Final Register CTA Section */}
       <section
         className="py-16 text-center mt-16"
         aria-labelledby="final-register"
@@ -160,7 +153,13 @@ export default function VolunteerPage() {
             Register Now
           </a>
         </div>
-      </section>
+      </section> */}
+      
+      {/* Page temporarily unavailable message */}
+      <div className="text-center py-24">
+        <h1 className="text-4xl font-bold mb-4">Page Coming Soon</h1>
+        <p className="text-lg text-gray-600">This page is temporarily unavailable.</p>
+      </div>
     </div>
   );
 }

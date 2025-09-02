@@ -12,7 +12,7 @@ const navItems = [
   { href: "/stalls", label: "Stalls" },
   { href: "/partners", label: "Partners" },
   // { href: "/throwback", label: "Throwback" },
-  { href: "/collaborate", label: "Volunteer" },
+  // { href: "/collaborate", label: "Volunteer" },
 ];
 
 export default function Navbar() {

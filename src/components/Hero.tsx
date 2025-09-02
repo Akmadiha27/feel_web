@@ -106,7 +106,7 @@ export default function Hero() {
             </Link>
 
             {/* Volunteer */}
-            <Link
+            {/* <Link
               href="http://bit.ly/4kPKaEJ"
               target="_blank"
               rel="noopener noreferrer"
@@ -121,7 +121,7 @@ export default function Hero() {
                          border-2 border-white/50 "
             >
               <span>Volunteer</span>
-            </Link>
+            </Link> */}
 
             {/* Partner */}
             <Link

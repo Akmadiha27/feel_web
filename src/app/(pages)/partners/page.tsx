@@ -6,18 +6,18 @@ export default function PartnersPage() {
   const partners = [
     {
       id: 1,
-      name: "T-Hub",
-      src: "/partners/p1.png",
-      alt: "T-Hub",
+      name: "EdVenture Park",
+      src: "/partners/p21.png",
+      alt: "EdVenture Park",
       description: [
-        "India's largest startup incubator based in Hyderabad.",
-        "Provides mentorship, workspace, and funding access to early-stage startups.",
-        "A global hub connecting entrepreneurs with investors and corporates."
+        "Student-focused startup incubator in Hyderabad.",
+        "Helps young entrepreneurs launch and scale ventures.",
+        "Provides mentorship, resources, and networking opportunities."
       ]
     },
     {
       id: 2,
-      name: "TGIC (Telangana Global Innovation Center)",
+      name: "TGIC (Telangana State Innovation Center)",
       src: "/partners/p2.png",
       alt: "TGIC",
       description: [
@@ -226,15 +226,15 @@ export default function PartnersPage() {
     },
     {
       id: 21,
-      name: "EdVenture Park",
-      src: "/partners/p21.png",
-      alt: "EdVenture Park",
+      name: "T-Hub",
+      src: "/partners/p1.png",
+      alt: "T-Hub",
       description: [
-        "Student-focused startup incubator in Hyderabad.",
-        "Helps young entrepreneurs launch and scale ventures.",
-        "Provides mentorship, resources, and networking opportunities."
+        "India's largest startup incubator based in Hyderabad.",
+        "Provides mentorship, workspace, and funding access to early-stage startups.",
+        "A global hub connecting entrepreneurs with investors and corporates."
       ]
-    }
+    },
   ];
 
   return (

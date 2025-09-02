@@ -235,7 +235,7 @@ export default function Sections() {
 
 
       {/* Volunteer Section */}
-      <section className="py-10" aria-labelledby="home-volunteer">
+      {/* <section className="py-10" aria-labelledby="home-volunteer">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 id="home-volunteer" className="text-2xl font-semibold tracking-tight inline-block border-b-2 border-[var(--color-brand-sand)] mb-6">Volunteer</h2>
           <div className="max-w-4xl mx-auto text-center">
@@ -256,7 +256,7 @@ export default function Sections() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Highlights Carousel */}
       <section className="py-10" aria-labelledby="home-highlights-carousel">
