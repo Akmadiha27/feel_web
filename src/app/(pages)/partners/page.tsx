@@ -17,7 +17,7 @@ export default function PartnersPage() {
     },
     {
       id: 2,
-      name: "TGIC (Telangana State Innovation Center)",
+      name: "TGIC (Telangana Innovation Cell)",
       src: "/partners/p2.png",
       alt: "TGIC",
       description: [
