@@ -239,8 +239,9 @@ export default function PartnersPage() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
-      <h1 className="text-3xl font-semibold tracking-tight">Partners</h1>
-      <div className="mt-8 space-y-6">
+      {/* <h1 className="text-3xl font-semibold tracking-tight">Partners</h1> */}
+      {/* Partner boxes section - commented out as requested */}
+      {/* <div className="mt-8 space-y-6">
         {partners.map((partner) => (
           <div key={partner.id} className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 border border-black/10 dark:border-white/10">
             <div className="flex items-start gap-6">
@@ -260,22 +261,89 @@ export default function PartnersPage() {
             </div>
           </div>
         ))}
+      </div> */}
+
+      {/* Sponsors Section */}
+      <div className="mt-16">
+        {/* <h2 className="text-4xl font-semibold tracking-tight mb-8 text-center">Sponsors</h2> */}
+        
+        {/* Sponsors Grid - Logos Only */}
+        {/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center mb-16">
+          {[
+            { src: "/partners/sponsor1.png", alt: "Sponsor 1" },
+            { src: "/partners/sponsor2.png", alt: "Sponsor 2" },
+            { src: "/partners/sponsor3.png", alt: "Sponsor 3" },
+            { src: "/partners/sponsor4.png", alt: "Sponsor 4" },
+            { src: "/partners/sponsor5.png", alt: "Sponsor 5" },
+            { src: "/partners/sponsor6.png", alt: "Sponsor 6" },
+            { src: "/partners/sponsor7.png", alt: "Sponsor 7" },
+            { src: "/partners/sponsor8.png", alt: "Sponsor 8" },
+            { src: "/partners/sponsor9.png", alt: "Sponsor 9" },
+            { src: "/partners/sponsor10.png", alt: "Sponsor 10" },
+          ].map((sponsor, index) => (
+            <div
+              key={index}
+              className="relative w-24 h-24 opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
+            >
+              <Image 
+                src={sponsor.src} 
+                alt={sponsor.alt} 
+                fill 
+                className="object-contain" 
+              />
+            </div>
+          ))}
+        </div> */}
+      </div>
+
+      {/* Current Partners Section */}
+      <div className="mt-16">
+        {/* <h2 className="text-4xl font-semibold tracking-tight mb-8 text-center">Current Partners</h2> */}
+        
+        {/* Current Partners Grid - Logos Only */}
+        {/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 items-center justify-items-center mb-16">
+          {[
+            { src: "/partnersc/current3.png", alt: "Current Partner 1" },
+            { src: "/partnersc/current4.png", alt: "Current Partner 2" },
+            { src: "/partners/p1.png", alt: "Current Partner 3" },
+            { src: "/partners/current4.png", alt: "Current Partner 4" },
+            { src: "/partners/current5.png", alt: "Current Partner 5" },
+            { src: "/partners/current6.png", alt: "Current Partner 6" },
+            { src: "/partners/current7.png", alt: "Current Partner 7" },
+            { src: "/partners/current8.png", alt: "Current Partner 8" },
+            { src: "/partners/current9.png", alt: "Current Partner 9" },
+            { src: "/partners/current10.png", alt: "Current Partner 10" },
+          ].map((partner, index) => (
+            <div
+              key={index}
+              className="relative w-54 h-54 opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
+            >
+              <Image 
+                src={partner.src} 
+                alt={partner.alt} 
+                fill 
+                className="object-contain" 
+              />
+            </div>
+          ))}
+        </div> */}
       </div>
 
       {/* Moving logo cloud consistent with home */}
       <div className="mt-16">
-        <h2 className="text-2xl font-semibold tracking-tight mb-8 text-center">Our Partners</h2>
+        <h2 className="text-4xl font-semibold tracking-tight mb-8 text-center">Previous Partners</h2>
         <LogoMarquee
           logos={[
             "/partners/p1.png", "/partners/p2.png", "/partners/p3.png", "/partners/p4.png",
-            "/partners/p5.png", "/partners/p6.png", "/partners/p7.jpeg", "/partners/p8.png",
-            "/partners/p9.png", "/partners/p10.png", "/partners/p11.png", "/partners/p12.jpeg",
-            "/partners/p13.jpeg", "/partners/p14.png", "/partners/p15.jpeg", "/partners/p16.jpeg",
-            "/partners/p17.png", "/partners/p18.png", "/partners/p19.png", "/partners/p20.jpeg",
+            "/partners/p5.png", "/partners/p6.png", "/partners/p7.png", "/partners/p8.png",
+            "/partners/p9.png", "/partners/p10.png", "/partners/p11.png", "/partners/p12.png",
+            "/partners/p13.jpeg", "/partners/p14.png", "/partners/p15.png", "/partners/p16.png",
+            "/partners/p17.png", "/partners/p18.png", "/partners/p19.png", "/partners/p20.png",
             "/partners/p21.png",
           ]}
         />
       </div>
+
 
       {/* Final Register CTA Section */}
       <section className="py-16 text-center bg-gradient-to-r from-[#ffd5ac]/20 via-[#70c7d9]/20 to-[#9174ea]/20 mt-16" aria-labelledby="final-register">
@@ -283,8 +351,9 @@ export default function PartnersPage() {
           <h2 id="final-register" className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
             Still thinking? Just join us — and truly FEEL it.
           </h2>
+          
           <h3 className="text-2xl sm:text-3xl font-bold tracking-tight mb-8">
-            Register Here
+            Register Here 
           </h3>
           <a
             href="https://pages.razorpay.com/pl_QsPAqay3600bdQ/view"

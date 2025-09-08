@@ -184,31 +184,84 @@ export default function Sections() {
         </div>
       </section>
 
-      {/* Partners Section */}
+      {/* Sponsors Section */}
+      <section className="py-10" aria-labelledby="home-sponsors">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* <h2
+            id="home-sponsors"
+            className="text-2xl font-semibold tracking-tight inline-block border-b-2 border-[var(--color-brand-sand)] mb-8"
+          >
+            Sponsors
+          </h2> */}
+
+          {/* Sponsors Grid - Logos Only */}
+          {/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center mb-8">
+            {[
+              { src: "/partners/sponsor1.png", alt: "Sponsor 1" },
+              { src: "/partners/sponsor2.png", alt: "Sponsor 2" },
+              { src: "/partners/sponsor3.png", alt: "Sponsor 3" },
+              { src: "/partners/sponsor4.png", alt: "Sponsor 4" },
+              { src: "/partners/sponsor5.png", alt: "Sponsor 5" },
+              { src: "/partners/sponsor6.png", alt: "Sponsor 6" },
+              { src: "/partners/sponsor7.png", alt: "Sponsor 7" },
+              { src: "/partners/sponsor8.png", alt: "Sponsor 8" },
+              { src: "/partners/sponsor9.png", alt: "Sponsor 9" },
+              { src: "/partners/sponsor10.png", alt: "Sponsor 10" },
+            ].map((sponsor, index) => (
+              <div
+                key={index}
+                className="relative w-24 h-24 opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
+              >
+                <img 
+                  src={sponsor.src} 
+                  alt={sponsor.alt} 
+                  className="w-full h-full object-contain" 
+                />
+              </div>
+            ))}
+          </div> */}
+        </div>
+      </section>
+
+      {/* Current Partners Section */}
       <section className="py-10" aria-labelledby="home-partners">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2
+          {/* <h2
             id="home-partners"
             className="text-2xl font-semibold tracking-tight inline-block border-b-2 border-[var(--color-brand-sand)] mb-8"
-
           >
-            Partners
-          </h2>
+            Current Partners
+          </h2> */}
 
-          {/* Full-width logo marquee */}
-          <LogoMarquee
-            logos={[
-              "/partners/p1.png", "/partners/p2.png", "/partners/p3.png", "/partners/p4.png",
-              "/partners/p5.png", "/partners/p6.png", "/partners/p7.png", "/partners/p8.png",
-              "/partners/p9.png", "/partners/p10.png", "/partners/p11.png", "/partners/p12.png",
-              "/partners/p13.jpeg", "/partners/p14.png", "/partners/p15.png", "/partners/p16.png",
-              "/partners/p17.png", "/partners/p18.png", "/partners/p19.png", "/partners/p20.png",
-              "/partners/p21.png",
-            ]}
-          />
+          {/* Current Partners Grid - Logos Only */}
+          {/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center mb-8">
+            {[
+              { src: "/partners/current1.png", alt: "Current Partner 1" },
+              { src: "/partners/current2.png", alt: "Current Partner 2" },
+              { src: "/partners/current3.png", alt: "Current Partner 3" },
+              { src: "/partners/current4.png", alt: "Current Partner 4" },
+              { src: "/partners/current5.png", alt: "Current Partner 5" },
+              { src: "/partners/current6.png", alt: "Current Partner 6" },
+              { src: "/partners/current7.png", alt: "Current Partner 7" },
+              { src: "/partners/current8.png", alt: "Current Partner 8" },
+              { src: "/partners/current9.png", alt: "Current Partner 9" },
+              { src: "/partners/current10.png", alt: "Current Partner 10" },
+            ].map((partner, index) => (
+              <div
+                key={index}
+                className="relative w-24 h-24 opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
+              >
+                <img 
+                  src={partner.src} 
+                  alt={partner.alt} 
+                  className="w-full h-full object-contain" 
+                />
+              </div>
+            ))}
+          </div> */}
 
           {/* Centered button */}
-          <div className="flex justify-center mt-8">
+          {/* <div className="flex justify-center mt-8">
             <Link
               href="/partners"
               className="inline-flex items-center gap-2 bg-purple-600 text-white px-8 py-4 rounded-md hover:bg-purple-800 font-medium transition-colors"
@@ -228,7 +281,7 @@ export default function Sections() {
                 />
               </svg>
             </Link>
-          </div>
+          </div> */}
         </div>
       </section>
 
