@@ -185,8 +185,8 @@ export default function Sections() {
       </section>
 
       {/* Sponsors Section */}
-      <section className="py-10" aria-labelledby="home-sponsors">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-0" aria-labelledby="home-sponsors">
+        <div className="mb-0 max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* <h2
             id="home-sponsors"
             className="text-2xl font-semibold tracking-tight inline-block border-b-2 border-[var(--color-brand-sand)] mb-8"
