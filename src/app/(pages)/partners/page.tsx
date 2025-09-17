@@ -283,7 +283,7 @@ export default function PartnersPage() {
           ].map((sponsor, index) => (
             <div
               key={index}
-              className="relative aspect-square w-28 sm:w-36 md:w-40 lg:w-48 xl:w-56 opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
+              className="relative w-full aspect-square overflow-hidden opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
             >
               <Image 
                 src={sponsor.src} 
@@ -316,7 +316,7 @@ export default function PartnersPage() {
           ].map((partner, index) => (
             <div
               key={index}
-              className="relative aspect-square w-28 sm:w-36 md:w-40 lg:w-48 xl:w-56 opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
+              className="relative w-1/2 aspect-square overflow-hidden opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
             >
               <Image 
                 src={partner.src} 
@@ -349,7 +349,7 @@ export default function PartnersPage() {
           ].map((partner, index) => (
             <div
               key={index}
-              className="relative aspect-square w-28 sm:w-36 md:w-40 lg:w-48 xl:w-56 opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
+              className="relative w-1/2 aspect-square overflow-hidden opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
             >
               <Image 
                 src={partner.src} 
