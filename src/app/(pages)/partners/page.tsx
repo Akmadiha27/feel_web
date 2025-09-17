@@ -261,29 +261,29 @@ export default function PartnersPage() {
             </div>
           </div>
         ))}
-      </div> */}
+      </div> }
 
       {/* Sponsors Section */}
       <div className="mt-16">
-        {/* <h2 className="text-4xl font-semibold tracking-tight mb-8 text-center">Sponsors</h2> */}
+        { <h2 className="text-4xl font-semibold tracking-tight mb-8 text-center">Sponsors</h2> }
         
         {/* Sponsors Grid - Logos Only */}
-        {/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center mb-16">
+        { <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 items-center justify-items-center mb-16">
           {[
-            { src: "/partners/sponsor1.png", alt: "Sponsor 1" },
-            { src: "/partners/sponsor2.png", alt: "Sponsor 2" },
-            { src: "/partners/sponsor3.png", alt: "Sponsor 3" },
-            { src: "/partners/sponsor4.png", alt: "Sponsor 4" },
-            { src: "/partners/sponsor5.png", alt: "Sponsor 5" },
-            { src: "/partners/sponsor6.png", alt: "Sponsor 6" },
-            { src: "/partners/sponsor7.png", alt: "Sponsor 7" },
-            { src: "/partners/sponsor8.png", alt: "Sponsor 8" },
-            { src: "/partners/sponsor9.png", alt: "Sponsor 9" },
-            { src: "/partners/sponsor10.png", alt: "Sponsor 10" },
+            { src: "/sponsors/sp1.png", alt: "Sponsor 1" },
+            { src: "/sponsors/sp2.png", alt: "Sponsor 2" },
+            { src: "/sponsors/sp3.png", alt: "Sponsor 3" },
+            // { src: "/partners/sponsor4.png", alt: "Sponsor 4" },
+            // { src: "/partners/sponsor5.png", alt: "Sponsor 5" },
+            // { src: "/partners/sponsor6.png", alt: "Sponsor 6" },
+            // { src: "/partners/sponsor7.png", alt: "Sponsor 7" },
+            // { src: "/partners/sponsor8.png", alt: "Sponsor 8" },
+            // { src: "/partners/sponsor9.png", alt: "Sponsor 9" },
+            // { src: "/partners/sponsor10.png", alt: "Sponsor 10" },
           ].map((sponsor, index) => (
             <div
               key={index}
-              className="relative w-24 h-24 opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
+              className="relative w-54 h-54 opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
             >
               <Image 
                 src={sponsor.src} 
@@ -293,26 +293,26 @@ export default function PartnersPage() {
               />
             </div>
           ))}
-        </div> */}
+        </div> }
       </div>
 
       {/* Current Partners Section */}
       <div className="mt-16">
-        {/* <h2 className="text-4xl font-semibold tracking-tight mb-8 text-center">Current Partners</h2> */}
+        {<h2 className="text-4xl font-semibold tracking-tight mb-8 text-center">Outreach Partners</h2> }
         
-        {/* Current Partners Grid - Logos Only */}
-        {/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 items-center justify-items-center mb-16">
+        {/*Current Partners Grid - Logos Only */}
+        {<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-8 items-center justify-items-center mb-16">
           {[
-            { src: "/partnersc/current3.png", alt: "Current Partner 1" },
-            { src: "/partnersc/current4.png", alt: "Current Partner 2" },
-            { src: "/partners/p1.png", alt: "Current Partner 3" },
-            { src: "/partners/current4.png", alt: "Current Partner 4" },
-            { src: "/partners/current5.png", alt: "Current Partner 5" },
-            { src: "/partners/current6.png", alt: "Current Partner 6" },
-            { src: "/partners/current7.png", alt: "Current Partner 7" },
-            { src: "/partners/current8.png", alt: "Current Partner 8" },
-            { src: "/partners/current9.png", alt: "Current Partner 9" },
-            { src: "/partners/current10.png", alt: "Current Partner 10" },
+            { src: "/partners/p19.png", alt: "Current Partner 1" },
+            { src: "/sponsors/op.png", alt: "Current Partner 2" },
+            //{ src: "/sponsors/cp3.png", alt: "Current Partner 3" },
+            //{ src: "/sponsors/cp4.jpeg", alt: "Current Partner 4" },
+            // { src: "/sponsors/cp5.jpeg", alt: "Current Partner 5" },
+            // { src: "/partners/current6.png", alt: "Current Partner 6" },
+            // { src: "/partners/current7.png", alt: "Current Partner 7" },
+            // { src: "/partners/current8.png", alt: "Current Partner 8" },
+            // { src: "/partners/current9.png", alt: "Current Partner 9" },
+            // { src: "/partners/current10.png", alt: "Current Partner 10" },
           ].map((partner, index) => (
             <div
               key={index}
@@ -326,7 +326,40 @@ export default function PartnersPage() {
               />
             </div>
           ))}
-        </div> */}
+        </div> }
+      </div>
+
+      {/* Current Partners Section */}
+      <div className="mt-16">
+        {<h2 className="text-4xl font-semibold tracking-tight mb-8 text-center">Partners</h2> }
+        
+        {/*Current Partners Grid - Logos Only */}
+        {<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 items-center justify-items-center mb-16">
+          {[
+            { src: "/sponsors/cp1.jpeg", alt: "Current Partner 1" },
+            { src: "/sponsors/cp2.webp", alt: "Current Partner 2" },
+            { src: "/sponsors/cp3.png", alt: "Current Partner 3" },
+            { src: "/sponsors/cp4.png", alt: "Current Partner 4" },
+            { src: "/partners/p1.png", alt: "Current Partner 5" },
+            { src: "/partners/p2.png", alt: "Current Partner 6" },
+            { src: "/partners/p3.png", alt: "Current Partner 7" },
+            { src: "/partners/p20.png", alt: "Current Partner 8" },
+            { src: "/sponsors/acp.png", alt: "Current Partner 9" },
+            { src: "/sponsors/gp.png", alt: "Current Partner 10" },
+          ].map((partner, index) => (
+            <div
+              key={index}
+              className="relative w-54 h-54 opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
+            >
+              <Image 
+                src={partner.src} 
+                alt={partner.alt} 
+                fill 
+                className="object-contain" 
+              />
+            </div>
+          ))}
+        </div> }
       </div>
 
       {/* Moving logo cloud consistent with home */}

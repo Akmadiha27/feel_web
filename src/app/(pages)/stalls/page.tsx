@@ -28,17 +28,38 @@ export default function StallsPage() {
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
       <h1 className="text-3xl font-semibold tracking-tight">Stalls</h1>
 
-      {/* Coming Soon Box */}
-      <div className="max-w-4xl mx-auto mt-8 mb-8">
-        <div className="bg-white/90 dark:bg-gray-800/90 shadow-md rounded-lg p-12 border border-black/10 dark:border-white/10 text-center">
-          <div className="text-6xl mb-4">🛍️</div>
-          <h3 className="text-2xl font-bold text-black/90 dark:text-white/90 mb-4">
-            Coming Soon
-          </h3>
-          <p className="text-lg text-black/70 dark:text-white/70">
-            Get ready to experience our upcoming Interactive Stalls! Don’t miss
-            your chance — book your stall today!
-          </p>
+      {/* Stalls Grid */}
+      <div className="mt-8 mb-8">
+        <div className="grid gap-6 max-w-6xl mx-auto">
+          {stalls.map((stall) => (
+            <div
+              key={stall.id}
+              className="bg-white/90 dark:bg-gray-800/90 shadow-md rounded-lg p-6 border border-black/10 dark:border-white/10 hover:shadow-lg transition-shadow duration-300"
+            >
+              <div className="flex items-start gap-6">
+                {/* Logo on the left */}
+                <div className="flex-shrink-0">
+                  <Image
+                    src={stall.icon}
+                    alt={`${stall.name} logo`}
+                    width={64}
+                    height={64}
+                    className="object-contain"
+                  />
+                </div>
+                
+                {/* Content on the right */}
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-xl font-bold text-black/90 dark:text-white/90 mb-2">
+                    {stall.name}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                    {stall.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 

@@ -20,10 +20,12 @@ export type Stall = {
 };
 
 export const stalls: Stall[] = [
-  { id: "a", name: "AR Playground", description: "Hands-on demos with augmented reality.", icon: "sparkles" },
-  { id: "b", name: "Maker Lab", description: "Rapid prototyping and DIY builds.", icon: "cpu" },
-  { id: "c", name: "Wellness Zone", description: "Mindfulness and recharge activities.", icon: "heart" },
-  { id: "d", name: "Food Alley", description: "Local culinary pop-ups and tastings.", icon: "utensils" },
+  { id: "a", name: "Dr. H Care", description: "Easy home services for all your healthcare needs", icon: "/stalls/st1.jpeg" },
+  { id: "b", name: "Prinkwellness", description: "PrinkWellness :  is a women’s health startup dedicated to providing safe, plant-based solutions for women wellness. Our flagship product is a clinically validated and regulatory-approved vaginal suppository designed to relieve menstrual cramps naturally, without the side effects of conventional medications.", icon: "/stalls/st2.jpeg" },
+  { id: "c", name: "Xcellia Perfumes", description: "Timeless fragrances", icon: "/stalls/st3.png" },
+  { id: "d", name: "Premier Senior", description: "PREMIER SENIOR IS AN ELDER CARE CENTRE , IN TELANGANA PIONEERING GERIATRIC CARE, OFFERING HOLISTIC AND PERSONALISED CARE FOR A HEALTHIER TOMORROW FOR SENIORS. COMPREHENSIVE HEALTH ASSESSMENT, EFFECTIVE DAYCARE AND REHABILITATION PROGRAMS COME TOGETHER AT PREMIER SENIOR TO PROVIDE UNPARALLELED CARE FOR THE ELDERLY.", icon: "/stalls/st4.jpeg" },
+  { id: "e", name: "Germanten Hospitals", description: "Germanten Hospital is a Multispecialty healthcare service that combines the legacy of healthcare expertise and German precision. We follow a patient-centric approach and are focused on ensuring clinical excellence, patients’ safety, and accessibility of quality care to every patient. By bringing in the best healthcare practices from across the world. Germanten Hospital got the most prestigious and coveted NABH Pre- accredited from the highest body of accreditation in India.", icon: "/stalls/st5.jpg" },
+  // { id: "f", name: "Creative Studio", description: "Art, design, and creative workshops for all skill levels and interests.", icon: "/partners/p6.png" },
 ];
 
 export type Partner = { id: string; name: string; logo: string };
