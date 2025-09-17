@@ -265,7 +265,7 @@ export default function PartnersPage() {
 
       {/* Sponsors Section */}
       <div className="mt-16">
-        { <h2 className="text-4xl font-semibold tracking-tight mb-8 text-center">Sponsors</h2> }
+        { <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-8 text-center">Sponsors</h2> }
         
         {/* Sponsors Grid - Logos Only */}
         { <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 items-center justify-items-center mb-16">
@@ -283,7 +283,7 @@ export default function PartnersPage() {
           ].map((sponsor, index) => (
             <div
               key={index}
-              className="relative w-54 h-54 opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
+              className="relative aspect-square w-28 sm:w-36 md:w-40 lg:w-48 xl:w-56 opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
             >
               <Image 
                 src={sponsor.src} 
@@ -298,7 +298,7 @@ export default function PartnersPage() {
 
       {/* Current Partners Section */}
       <div className="mt-16">
-        {<h2 className="text-4xl font-semibold tracking-tight mb-8 text-center">Outreach Partners</h2> }
+        {<h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-8 text-center">Outreach Partners</h2> }
         
         {/*Current Partners Grid - Logos Only */}
         {<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-8 items-center justify-items-center mb-16">
@@ -316,7 +316,7 @@ export default function PartnersPage() {
           ].map((partner, index) => (
             <div
               key={index}
-              className="relative w-54 h-54 opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
+              className="relative aspect-square w-28 sm:w-36 md:w-40 lg:w-48 xl:w-56 opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
             >
               <Image 
                 src={partner.src} 
@@ -331,7 +331,7 @@ export default function PartnersPage() {
 
       {/* Current Partners Section */}
       <div className="mt-16">
-        {<h2 className="text-4xl font-semibold tracking-tight mb-8 text-center">Partners</h2> }
+        {<h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-8 text-center">Partners</h2> }
         
         {/*Current Partners Grid - Logos Only */}
         {<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 items-center justify-items-center mb-16">
@@ -349,7 +349,7 @@ export default function PartnersPage() {
           ].map((partner, index) => (
             <div
               key={index}
-              className="relative w-54 h-54 opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
+              className="relative aspect-square w-28 sm:w-36 md:w-40 lg:w-48 xl:w-56 opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
             >
               <Image 
                 src={partner.src} 
@@ -364,7 +364,7 @@ export default function PartnersPage() {
 
       {/* Moving logo cloud consistent with home */}
       <div className="mt-16">
-        <h2 className="text-4xl font-semibold tracking-tight mb-8 text-center">Previous Partners</h2>
+        <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-8 text-center">Previous Partners</h2>
         <LogoMarquee
           logos={[
             "/partners/p1.png", "/partners/p2.png", "/partners/p3.png", "/partners/p4.png",
