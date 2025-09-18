@@ -28,7 +28,7 @@ export default function SpeakersPage() {
             { src: "/speak/sp12.png", alt: "Speaker 12", name: "Speaker Name", designation: "Designation" },
             { src: "/speak/sp13.png", alt: "Speaker 13", name: "K M Fasihuddin ", designation: " Director at Madina High School" },
             { src: "/speak/sp14.png", alt: "Speaker 14", name: "Vikas Katragadda", designation: "Co-founder , NandiVentures" },
-            { src: "/speak/sp15.png", alt: "Speaker 15", name: "Abrar Khan", designation: "Creator , Hyderabad" },
+            //{ src: "/speak/sp15.png", alt: "Speaker 15", name: "Abrar Khan", designation: "Creator , Hyderabad" },
             { src: "/speak/sp16.png", alt: "Speaker 16", name: "Zara Siddiqui", designation: "Counselling Psychologist" },
             { src: "/speak/sp17.png", alt: "Speaker 17", name: "Mohammed Fayaz", designation: "Founder, Triumphs of Talent" },
             { src: "/speak/sp18.png", alt: "Speaker 18", name: "Dr. Mohammed Faisal", designation: "Pulmonologist,Kingston Hospital" },

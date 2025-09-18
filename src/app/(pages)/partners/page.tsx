@@ -268,15 +268,15 @@ export default function PartnersPage() {
       <div className="mt-10">
         <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-8 text-center">Powered By</h2>
         
-        {/* Powered By Grid - 2 logos */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 items-center justify-items-center mb-10">
+        {/* Powered By Row - 2 logos with tight spacing */}
+        <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 mb-5">
           {[
             { src: "/partners/p22.png", alt: "Powered By 1" },
             { src: "/partners/p21.png", alt: "Powered By 2" },
           ].map((powered, index) => (
             <div
               key={index}
-              className="relative w-1/3 aspect-square overflow-hidden opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
+              className="relative w-[16%] sm:w-1/8 md:w-[20%] lg:w-[22 %] aspect-square overflow-hidden opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
             >
               <Image 
                 src={powered.src} 
@@ -294,12 +294,12 @@ export default function PartnersPage() {
         { <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-8 text-center">Sponsors</h2> }
         
         {/* Sponsors Grid - Logos Only */}
-        { <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-2 items-center justify-items-center mb-10">
+        { <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2 items-center justify-items-center mb-10">
           {[
             { src: "/sponsors/sp1.png", alt: "Sponsor 1" },
             { src: "/sponsors/sp2.png", alt: "Sponsor 2" },
             { src: "/sponsors/sp3.png", alt: "Sponsor 3" },
-            // { src: "/partners/sponsor4.png", alt: "Sponsor 4" },
+            { src: "/sponsors/sp4.png", alt: "Sponsor 4" },
             // { src: "/partners/sponsor5.png", alt: "Sponsor 5" },
             // { src: "/partners/sponsor6.png", alt: "Sponsor 6" },
             // { src: "/partners/sponsor7.png", alt: "Sponsor 7" },
@@ -309,7 +309,7 @@ export default function PartnersPage() {
           ].map((sponsor, index) => (
             <div
               key={index}
-              className="relative w-1/3 aspect-square overflow-hidden opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
+              className="relative w-1/2 aspect-square overflow-hidden opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
             >
               <Image 
                 src={sponsor.src} 
