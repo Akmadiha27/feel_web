@@ -263,12 +263,38 @@ export default function PartnersPage() {
         ))}
       </div> }
 
+
+      {/* Powered By Section */}
+      <div className="mt-10">
+        <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-8 text-center">Powered By</h2>
+        
+        {/* Powered By Grid - 2 logos */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 items-center justify-items-center mb-10">
+          {[
+            { src: "/partners/p22.png", alt: "Powered By 1" },
+            { src: "/partners/p21.png", alt: "Powered By 2" },
+          ].map((powered, index) => (
+            <div
+              key={index}
+              className="relative w-1/3 aspect-square overflow-hidden opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
+            >
+              <Image 
+                src={powered.src} 
+                alt={powered.alt} 
+                fill 
+                className="object-contain" 
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Sponsors Section */}
-      <div className="mt-16">
+      <div className="mt-10">
         { <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-8 text-center">Sponsors</h2> }
         
         {/* Sponsors Grid - Logos Only */}
-        { <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 items-center justify-items-center mb-16">
+        { <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-2 items-center justify-items-center mb-10">
           {[
             { src: "/sponsors/sp1.png", alt: "Sponsor 1" },
             { src: "/sponsors/sp2.png", alt: "Sponsor 2" },
@@ -283,7 +309,7 @@ export default function PartnersPage() {
           ].map((sponsor, index) => (
             <div
               key={index}
-              className="relative w-full aspect-square overflow-hidden opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
+              className="relative w-1/3 aspect-square overflow-hidden opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
             >
               <Image 
                 src={sponsor.src} 
@@ -297,26 +323,26 @@ export default function PartnersPage() {
       </div>
 
       {/* Current Partners Section */}
-      <div className="mt-16">
-        {<h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-8 text-center">Outreach Partners</h2> }
+      {/* <div className="mt-16"> */}
+        {/* {<h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-8 text-center">Outreach Partners</h2> } */}
         
         {/*Current Partners Grid - Logos Only */}
-        {<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-8 items-center justify-items-center mb-16">
+        {/* {<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-8 items-center justify-items-center mb-16">
           {[
             { src: "/partners/p19.png", alt: "Current Partner 1" },
             { src: "/sponsors/op.png", alt: "Current Partner 2" },
-            //{ src: "/sponsors/cp3.png", alt: "Current Partner 3" },
-            //{ src: "/sponsors/cp4.jpeg", alt: "Current Partner 4" },
-            // { src: "/sponsors/cp5.jpeg", alt: "Current Partner 5" },
-            // { src: "/partners/current6.png", alt: "Current Partner 6" },
-            // { src: "/partners/current7.png", alt: "Current Partner 7" },
-            // { src: "/partners/current8.png", alt: "Current Partner 8" },
-            // { src: "/partners/current9.png", alt: "Current Partner 9" },
-            // { src: "/partners/current10.png", alt: "Current Partner 10" },
+            { src: "/sponsors/cp3.png", alt: "Current Partner 3" },
+            { src: "/sponsors/cp4.jpeg", alt: "Current Partner 4" },
+            { src: "/sponsors/cp5.jpeg", alt: "Current Partner 5" },
+            { src: "/partners/current6.png", alt: "Current Partner 6" },
+            { src: "/partners/current7.png", alt: "Current Partner 7" },
+            { src: "/partners/current8.png", alt: "Current Partner 8" },
+            { src: "/partners/current9.png", alt: "Current Partner 9" },
+            { src: "/partners/current10.png", alt: "Current Partner 10" },
           ].map((partner, index) => (
             <div
               key={index}
-              className="relative w-1/2 aspect-square overflow-hidden opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
+              className="relative w-1/4 aspect-square overflow-hidden opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
             >
               <Image 
                 src={partner.src} 
@@ -327,7 +353,7 @@ export default function PartnersPage() {
             </div>
           ))}
         </div> }
-      </div>
+      </div> */}
 
       {/* Current Partners Section */}
       <div className="mt-16">
@@ -340,10 +366,10 @@ export default function PartnersPage() {
             { src: "/sponsors/cp2.webp", alt: "Current Partner 2" },
             { src: "/sponsors/cp3.png", alt: "Current Partner 3" },
             { src: "/sponsors/cp4.png", alt: "Current Partner 4" },
-            { src: "/partners/p1.png", alt: "Current Partner 5" },
+            { src: "/partners/p19.png", alt: "Current Partner 5" },
             { src: "/partners/p2.png", alt: "Current Partner 6" },
-            { src: "/partners/p3.png", alt: "Current Partner 7" },
-            { src: "/partners/p20.png", alt: "Current Partner 8" },
+            { src: "/sponsors/op.png", alt: "Current Partner 7" },
+            //{ src: "/partners/p20.png", alt: "Current Partner 8" },
             { src: "/sponsors/acp.png", alt: "Current Partner 9" },
             { src: "/sponsors/gp.png", alt: "Current Partner 10" },
           ].map((partner, index) => (

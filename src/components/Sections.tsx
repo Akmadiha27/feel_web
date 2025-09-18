@@ -158,13 +158,20 @@ export default function Sections() {
             <Link href="/stalls" className="text-sm text-purple-600 hover:text-purple-800">View All</Link>
           </div>
 
-          <div className="max-w-4xl mx-auto mb-8">
-            <div className="bg-white/90 dark:bg-gray-800/90 shadow-md rounded-lg p-12 border border-black/10 dark:border-white/10 text-center">
-              <div className="text-6xl mb-4">🛍️</div>
-              <h3 className="text-2xl font-bold text-black/90 dark:text-white/90 mb-4">Coming Soon</h3>
-              <p className="text-lg text-black/70 dark:text-white/70">
-                Get ready to experience our upcoming Interactive Stalls! Don’t miss your chance — book your stall today!
-              </p>
+          <div className="mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 items-center justify-items-center">
+              {stalls.map((stall) => (
+                <div
+                  key={stall.id}
+                  className="relative w-full aspect-square overflow-hidden rounded-lg bg-white/80 dark:bg-black/30 p-4 border border-black/10 dark:border-white/10"
+                >
+                  <img
+                    src={stall.icon}
+                    alt={stall.name}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
